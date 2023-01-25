@@ -160,7 +160,7 @@ SWEP.Bash = true
 SWEP.PrimaryBash = false
 SWEP.BashDamage = 27
 SWEP.PreBashTime = 1
-SWEP.PostBashTime = 0.7
+SWEP.PostBashTime = 1
 
 -------------------------- TRACERS
 
@@ -208,10 +208,10 @@ SWEP.CustomizeSnapshotPos = Vector(-2, 10, 3)
 
 -------------------------- HoldTypes
 
-SWEP.HoldType = "smg"
-SWEP.HoldTypeSprint = "smg"
-SWEP.HoldTypeHolstered = "smg"
-SWEP.HoldTypeSights = "smg"
+SWEP.HoldType = "shotgun"
+SWEP.HoldTypeSprint = "shotgun"
+SWEP.HoldTypeHolstered = "shotgun"
+SWEP.HoldTypeSights = "shotgun"
 SWEP.HoldTypeCustomize = "pistol"
 SWEP.HoldTypeBlindfire = "pistol"
 
@@ -225,26 +225,19 @@ SWEP.MuzzleParticle = "muzzleflash_1"
 SWEP.AfterShotParticle = "barrel_smoke_plume"
 SWEP.MuzzleEffectQCA = 1
 SWEP.ProceduralViewQCA = 1
+SWEP.CaseEffectQCA = 2 --Shell Attachment
 
 SWEP.CamQCA = 1
 SWEP.CamQCA_Mult = 1
 SWEP.CamCoolView = true
 
-SWEP.ShouldDropMag = true
-SWEP.ShouldDropMagEmpty = true
-
-SWEP.ShellModel = "models/models/weapons/shared/shell_9mm_hr.mdl"
+SWEP.ShellModel = "models/pacagma/KF2Weapons/shotguns/quadbarrel/shells.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
-SWEP.ShellScale = 0.08
+--SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
-
-SWEP.ShouldDropMag = true
-SWEP.DropMagazineModel = "models/pacagma/KF2Weapons/submachine/P90Mag.mdl"
-SWEP.DropMagazineSounds = {"physics/metal/weapon_impact_soft1.wav", "physics/metal/weapon_impact_soft2.wav", "physics/metal/weapon_impact_soft3.wav"}
-SWEP.DropMagazineAmount = 1
-SWEP.DropMagazineTime = 1.47
-SWEP.DropMagazineQCA = 3
-SWEP.DropMagazineAng = Angle(0, -70, 0)
+SWEP.ShellTime = 1
+SWEP.ShellSound = ""
+SWEP.NoShellEject = true -- Don't eject shell on fire
 
 -------------------------- SOUNDS
 
@@ -261,7 +254,7 @@ SWEP.FiremodeSound = "KF2.FireModeSwitch"
 --SWEP.ShootSoundLooping = ""
 --SWEP.ShootSoundSilenced = ""
 
-SWEP.ShootVolume = 200
+SWEP.ShootVolume = 100
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
@@ -276,6 +269,7 @@ SWEP.Animations = {
         Source = "reload_half",
 		MinProgress = 0.83,
 		FireASAP = true,
+        --EjectAt = 3,
         EventTable = {
             {s = "KF2.BarrelOpenLatch", t = 34 / 120},
             {s = "KF2.BarrelBulletIn", t = 142 / 120},
@@ -287,6 +281,7 @@ SWEP.Animations = {
         Source = "reload_empty",
 		MinProgress = 0.83,
 		FireASAP = true,
+       -- EjectAt = 3,
         EventTable = {
             {s = "KF2.BarrelOpenLatch", t = 34 / 120},
             {s = "KF2.BarrelBulletIn", t = 142 / 120},
@@ -296,6 +291,8 @@ SWEP.Animations = {
     },
 	["reload_elite"] = {
         Source = "Reload_Half_Elite",
+        FireASAP = true,
+        --EjectAt = 15,
         EventTable = {
             {s = "KF2.BarrelOpenLatch", t = 11 / 60},
             {s = "KF2.BarrelQuickReloadIn", t = 35 / 60},
@@ -305,6 +302,8 @@ SWEP.Animations = {
     },
 	["reload_empty_elite"] = {
         Source = "Reload_Empty_Elite",
+       -- EjectAt = 15,
+        FireASAP = true,
         EventTable = {
             {s = "KF2.BarrelOpenLatch", t = 11 / 60},
             {s = "KF2.BarrelQuickReloadIn", t = 35 / 60},

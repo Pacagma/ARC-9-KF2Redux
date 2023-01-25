@@ -69,15 +69,18 @@ SWEP.Crosshair = true
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 857
+--SWEP.RPM = 857
 
 SWEP.Firemodes = {
     {
         Mode = -1,
+        ShootSoundLooping = "KF2.P90.ShootLoop",
+        RPM = 857,
         -- add other attachment modifiers
     },
     {
         Mode = 1,
+        ShootSound = "KF2.P90.SmallShoot",
         RPM = 600,
         Hook_TranslateAnimation = function (self, anim)
         if anim == "fire" then
@@ -215,15 +218,13 @@ SWEP.CamQCA = 1
 SWEP.CamQCA_Mult = 1
 SWEP.CamCoolView = true
 
-SWEP.ShouldDropMag = true
-SWEP.ShouldDropMagEmpty = true
-
 SWEP.ShellModel = "models/models/weapons/shared/shell_9mm_hr.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 SWEP.ShellScale = 0.08
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
-SWEP.ShouldDropMag = true
+SWEP.ShouldDropMagEmpty = true
+SWEP.ShouldDropMag = false
 SWEP.DropMagazineModel = "models/pacagma/KF2Weapons/submachine/P90Mag.mdl"
 SWEP.DropMagazineSounds = {"physics/metal/weapon_impact_soft1.wav", "physics/metal/weapon_impact_soft2.wav", "physics/metal/weapon_impact_soft3.wav"}
 SWEP.DropMagazineAmount = 1

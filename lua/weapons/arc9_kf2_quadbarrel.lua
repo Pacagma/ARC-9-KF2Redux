@@ -238,6 +238,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 SWEP.ShellTime = 1
 SWEP.ShellSound = ""
 SWEP.NoShellEject = true -- Don't eject shell on fire
+SWEP.CustomizePos = Vector(19, 35, 2)
 
 -------------------------- SOUNDS
 

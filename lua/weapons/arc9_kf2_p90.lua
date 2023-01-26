@@ -234,6 +234,8 @@ SWEP.DropMagazineTime = 1.47
 SWEP.DropMagazineQCA = 3
 SWEP.DropMagazineAng = Angle(0, -70, 0)
 
+SWEP.CustomizePos = Vector(11, 25, 4)
+
 -------------------------- SOUNDS
 
 local path = "sound/kf2/p90/"

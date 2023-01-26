@@ -4,20 +4,20 @@ SWEP.Base = "arc9_kf2_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - KF2 Weapons Redux"
-SWEP.SubCategory = "Shotguns"
+SWEP.SubCategory = "Launchers"
 
-SWEP.PrintName = "Doomstick"
+SWEP.PrintName = "RPG-7"
 
-SWEP.Class = "Shotgun"
+SWEP.Class = "Rocket Launcher"
 
 SWEP.Credits = {
     Author = "Pacagma/Twilight Sparkle",
     Assets = "Killing Floor 2"
 }
 
-SWEP.Description = [[Primary fire uses a single barrel only. Alt-fire shoots all barrels at once.]]
+SWEP.Description = [[Only arms itself a few meters downrange so you don't blow your own face off. And watch the back-blast!]]
 
-SWEP.ViewModel = "models/pacagma/KF2Weapons/shotguns/quadbarrel/doomstick.mdl"
+SWEP.ViewModel = "models/pacagma/KF2Weapons/specials/rpg-7/rpg-7.mdl"
 SWEP.WorldModel = "models/pacagma/KF2Weapons/shotguns/quadbarrel/doomstickworld.mdl"
 SWEP.DefaultBodygroups = "000000000"
 
@@ -36,17 +36,17 @@ SWEP.WorldModelOffset = {
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 240 -- Damage done at point blank range
-SWEP.DamageMin = 150 -- Damage done at maximum range
+SWEP.DamageMax = 900-- Damage done at point blank range
+SWEP.DamageMin = 900 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
-SWEP.RangeMin = 200 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 1800 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.RangeMin = 387 -- How far bullets retain their maximum damage for.
+SWEP.RangeMax = 387 -- In Hammer units, how far bullets can travel before dealing DamageMin.
 
-SWEP.Penetration = 4 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration = 0 -- Units of wood that can be penetrated by this gun.
 
-SWEP.ImpactForce = 55 -- Stumble Power
+SWEP.ImpactForce = 400 -- Stumble Power
 
 -------------------------- PHYS BULLET BALLISTICS
 
@@ -56,11 +56,11 @@ SWEP.PhysBulletDrag = 1.15
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "SMG1" -- What ammo type this gun uses.
+SWEP.Ammo = "RPG_Round" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 4 -- Self-explanatory.
-SWEP.SupplyLimit = 10 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
+SWEP.ClipSize = 1 -- Self-explanatory.
+SWEP.SupplyLimit = 13 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 0 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
@@ -69,37 +69,14 @@ SWEP.Crosshair = true
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 240
+SWEP.RPM = 21
 --SWEP.PushBackForce = 180
 
 SWEP.Firemodes = {
     {
-        Mode = 1,
-		PrintName = "SINGLE",
-		AmmoPerShot = 2,
-        ShootSound = "KF2.Barrel.ShootOutDoor",
-        ShootSoundIndoor = "KF2.Barrel.ShootInDoor",
-        DistantShootSound = "KF2.Barrel.DistantShoot",
-        DistantShootSoundIndoor = "KF2.Barrel.DistantShoot",
-        -- add other attachment modifiers
+        Mode = -1,
+        PrintName = "SINGLE"
     },
-    {
-        Mode = 1,
-		PrintName = "BOTH",
-        RPM = 240,
-        ShootSound = "KF2.ShootQuadShottyOutDoor",
-        ShootSoundIndoor = "KF2.ShootQuadShottyInDoor",
-        DistantShootSound = "",
-        DistantShootSoundIndoor = "",
-		AmmoPerShot = 4,
-		RecoilMult = 3,
-        PushBackForce = 200,
-        Hook_TranslateAnimation = function (self, anim)
-        if anim == "fire" then
-        return "fire_alt"
-        end
-        end,
-    }
 }
 -------------------------- RECOIL
 
@@ -134,7 +111,7 @@ SWEP.VisualRecoilPunch = 1
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.19
+SWEP.Spread = 0.001
 
 SWEP.SpreadAddRecoil = 0.0002 -- Applied per unit of recoil.
 
@@ -170,13 +147,13 @@ SWEP.TracerColor = Color(255, 255, 155) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.67, 0, 0),
+    Pos = Vector(-2.80, 0, 0),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
-    ViewModelFOV = 50,
+    ViewModelFOV = 70,
 }
 
-SWEP.ViewModelFOVBase = 70
+SWEP.ViewModelFOVBase = 90
 
 SWEP.SprintPos = Vector(-1, -5, 0)
 SWEP.SprintAng = Angle(-5, 0, 5)
@@ -208,12 +185,9 @@ SWEP.CustomizeSnapshotPos = Vector(-2, 10, 3)
 
 -------------------------- HoldTypes
 
-SWEP.HoldType = "shotgun"
-SWEP.HoldTypeSprint = "shotgun"
-SWEP.HoldTypeHolstered = "shotgun"
-SWEP.HoldTypeSights = "shotgun"
-SWEP.HoldTypeCustomize = "pistol"
-SWEP.HoldTypeBlindfire = "pistol"
+SWEP.HoldTypeHolstered = "passive"
+SWEP.HoldType = "rpg"
+SWEP.HoldTypeSights = "rpg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
@@ -231,7 +205,7 @@ SWEP.CamQCA = 1
 SWEP.CamQCA_Mult = 1
 SWEP.CamCoolView = true
 
-SWEP.ShellModel = "models/pacagma/KF2Weapons/shotguns/quadbarrel/doomstickloader.mdl"
+--SWEP.ShellModel = "models/pacagma/KF2Weapons/shotguns/quadbarrel/doomstickloader.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 --SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
@@ -240,26 +214,20 @@ SWEP.NoShellEject = true -- Don't eject shell on fire
 SWEP.ShellSounds = {"", ""}
 SWEP.CustomizePos = Vector(19, 35, 2)
 
-SWEP.ShouldDropMagEmpty = true
-SWEP.ShouldDropMag = true
-SWEP.DropMagazineModel = "models/pacagma/KF2Weapons/shotguns/quadbarrel/shell.mdl"
-SWEP.DropMagazineSounds = {"physics/metal/weapon_impact_soft1.wav", "physics/metal/weapon_impact_soft2.wav", "physics/metal/weapon_impact_soft3.wav"}
-SWEP.DropMagazineAmount = 4
-SWEP.DropMagazineQCA = 1
-SWEP.DropMagazineTime = 1.1
-SWEP.DropMagazineVelocity = Vector(0, 0, 0)
-SWEP.DropMagazineAng = Angle(0, -70, 0)
+SWEP.ShootEnt = "kf2_rocket_rpg" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEntForce = 1000
+SWEP.SetFuseTime = 0
 
 -------------------------- SOUNDS
 
-local path = "sound/kf2/quadbarrel/"
+local path = "sound/kf2/rpg-7/"
 
 --SWEP.ShootSound = "KF2.Barrel.ShootOutDoor"
 --SWEP.ShootSoundIndoor = "KF2.Barrel.ShootInDoor"
 --SWEP.DistantShootSoundIndoor = "KF2.Barrel.DistantShoot"
 --SWEP.DistantShootSound = "KF2.Barrel.DistantShoot"
 SWEP.DryFireSound = "KF2.Barrel.DryShoot"
-SWEP.FiremodeSound = "KF2.FireModeSwitch"
+--SWEP.FiremodeSound = "KF2.FireModeSwitch"
 --SWEP.ShootSoundTail = ""
 --SWEP.FirstShootSound = ""
 --SWEP.ShootSoundLooping = ""
@@ -273,20 +241,8 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"Shoot"},
     },
-	["fire_alt"] = {
-        Source = {"ShootAlt"},
-    },
-    ["reload"] = {
-        Source = "reload_half",
-		MinProgress = 0.83,
-		FireASAP = true,
-        --EjectAt = 3,
-        EventTable = {
-            {s = "KF2.BarrelOpenLatch", t = 34 / 120},
-            {s = "KF2.BarrelBulletIn", t = 142 / 120},
-            {s = "KF2.BarrelBulletIn", t = 191 / 120},
-            {s = "KF2.BarrelCloseLatch", t = 281 / 120},
-        },
+    ["fire_ads"] = {
+        Source = {"Shoot_Iron"},
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -300,20 +256,9 @@ SWEP.Animations = {
             {s = "KF2.BarrelCloseLatch", t = 281 / 120},
         },
     },
-	["reload_elite"] = {
-        Source = "Reload_Half_Elite",
-        FireASAP = true,
-        EjectAt = 15/60,
-        EventTable = {
-            {s = "KF2.BarrelOpenLatch", t = 11 / 60},
-            {s = "KF2.BarrelQuickReloadIn", t = 35 / 60},
-            {s = "KF2.BarrelQuickReloadLock", t = 45 / 60},
-            {s = "KF2.BarrelCloseLatch", t = 71 / 60},
-        },
-    },
 	["reload_empty_elite"] = {
         Source = "Reload_Empty_Elite",
-        EjectAt = 15/60,
+        --EjectAt = 15/60,
         FireASAP = true,
         EventTable = {
             {s = "KF2.BarrelOpenLatch", t = 11 / 60},
@@ -336,6 +281,9 @@ SWEP.Animations = {
     },
     ["idle"] = {
         Source = "idle",
+    },
+    ["idle_sights"] = {
+        Source = "Idle_Iron",
     },
     ["enter_sprint"] = {
         Source = "Sprint_In",
@@ -362,15 +310,6 @@ SWEP.Animations = {
         EventTable = {
             { s = "KF2.Barrel.Rustle", t = 1 / 60 },
             { s = "KF2.Barrel.Rustle", t = 56 / 60 },
-        },
-    },
-    ["2_inspect"] = {
-        Source = {"Guncheck_v3"},
-        MinProgress = 0.1,
-        FireASAP = true,
-        EventTable = {
-            { s = "KF2.Barrel.Rustle", t = 5 / 30 },
-            { s = "KF2.Barrel.Rustle", t = 28 / 30 },
         },
     },
     ["bash"] = {
@@ -431,20 +370,13 @@ SWEP.Attachments = {
         PrintName = "Perks",
         Category = 
     {
-        "KF2.Perks.Elite.Reload.Support",
-        "KF2.Perks.High.Capacity.Mags.Support",
-        "KF2.Perks.Salvo.Support",
-        "KF2.Perks.Penetration.Support",
-        "KF2.Perks.Armor.Pierce.Support",
-        "KF2.Perks.Tight.Choke.Support",
-        "KF2.Perks.Ressuply.Pack.Support",
-        "KF2.Perks.Concussion.Rounds.Support",
+        "KF2.Perks.Elite.Reload.RPG7",
     }
     },
     {
 
         PrintName = "Skins",
-        Category = "kf2_skins_quadbarrel",
+        Category = "kf2_skins_rpg-7",
         CosmeticOnly = true,
     },
 }

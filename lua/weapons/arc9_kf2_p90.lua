@@ -81,8 +81,11 @@ SWEP.Firemodes = {
     },
     {
         Mode = 1,
-        ShootSound = "KF2.P90.SmallShoot",
         ShootSoundTail = "",
+        ShootSound = "KF2.P90.ShootOutDoor",
+        ShootSoundIndoor = "KF2.P90.ShootInDoor",
+        DistantShootSound = "KF2.P90.DistantShoot",
+        DistantShootSoundIndoor = "KF2.P90.DistantShoot",
         RPM = 600,
         Hook_TranslateAnimation = function (self, anim)
         if anim == "fire" then

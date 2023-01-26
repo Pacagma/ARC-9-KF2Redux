@@ -6,7 +6,7 @@ sound.Add( {
     --pitch = {97,103},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
-        "kf2/p90/ShootLoopP90.ogg",
+        "kf2/p90/LoopShoot/Looping.wav",
     }
 } )
 sound.Add( {

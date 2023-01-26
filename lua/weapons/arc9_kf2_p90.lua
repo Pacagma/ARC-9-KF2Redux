@@ -75,12 +75,14 @@ SWEP.Firemodes = {
     {
         Mode = -1,
         ShootSoundLooping = "KF2.P90.ShootLoop",
+        ShootSoundTail = "KF2.P90.ShootTail",
         RPM = 857,
         -- add other attachment modifiers
     },
     {
         Mode = 1,
         ShootSound = "KF2.P90.SmallShoot",
+        ShootSoundTail = "",
         RPM = 600,
         Hook_TranslateAnimation = function (self, anim)
         if anim == "fire" then
@@ -240,7 +242,7 @@ local path = "sound/kf2/p90/"
 --SWEP.ShootSoundIndoor = "KF2.P90.SmallShoot"
 --SWEP.DistantShootSoundIndoor = "KF2.P90.DistantShootMedium"
 --SWEP.DistantShootSound = "KF2.P90.DistantShoot"
-SWEP.ShootSoundTail = "KF2.P90.ShootTail"
+--SWEP.ShootSoundTail = "KF2.P90.ShootTail"
 SWEP.DryFireSound = "KF2.P90.DryShoot"
 SWEP.FiremodeSound = "KF2.FireModeSwitch"
 --SWEP.FirstShootSound = ""

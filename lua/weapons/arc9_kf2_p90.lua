@@ -223,9 +223,9 @@ SWEP.CamQCA = 1
 SWEP.CamQCA_Mult = 1
 SWEP.CamCoolView = true
 
-SWEP.ShellModel = "models/models/weapons/shared/shell_9mm_hr.mdl"
+SWEP.ShellModel = "models/pacagma/KF2Weapons/submachine/P90Casing.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
-SWEP.ShellScale = 0.08
+--SWEP.ShellScale = 0.08
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShouldDropMagEmpty = true

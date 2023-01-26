@@ -2,5 +2,4 @@
 {
 	"$basetexture" "pacagma/KF2Weapons/submachine/P90/Wep_1stP_Kobra_Lens_A"
 	"$additive" 1
-	"$color" "[255 0 0]"
 }

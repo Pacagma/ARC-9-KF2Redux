@@ -25,7 +25,7 @@ SWEP.Slot = 4
 
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
-SWEP.WorldModelMirror = "models/pacagma/KF2Weapons/shotguns/quadbarrel/doomstick.mdl"
+SWEP.WorldModelMirror = "models/pacagma/KF2Weapons/shotguns/quadbarrel/doomstickworld.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-17, 6, -6.5),
     Ang = Angle(-5, 0, 180),
@@ -46,7 +46,7 @@ SWEP.RangeMax = 1800 -- In Hammer units, how far bullets can travel before deali
 
 SWEP.Penetration = 4 -- Units of wood that can be penetrated by this gun.
 
-SWEP.ImpactForce = 8
+SWEP.ImpactForce = 55 -- Stumble Power
 
 -------------------------- PHYS BULLET BALLISTICS
 
@@ -61,7 +61,7 @@ SWEP.Ammo = "SMG1" -- What ammo type this gun uses.
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 4 -- Self-explanatory.
 SWEP.SupplyLimit = 10 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
-SWEP.SecondarySupplyLimit = 12 -- Amount of reserve UBGL magazines you can take.
+SWEP.SecondarySupplyLimit = 0 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ReloadInSights = false -- This weapon can aim down sights while reloading.
 SWEP.DrawCrosshair = true
@@ -235,10 +235,19 @@ SWEP.ShellModel = "models/pacagma/KF2Weapons/shotguns/quadbarrel/shells.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 --SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
-SWEP.ShellTime = 1
+SWEP.ShellTime = 10
 SWEP.ShellSound = ""
 SWEP.NoShellEject = true -- Don't eject shell on fire
 SWEP.CustomizePos = Vector(19, 35, 2)
+
+SWEP.ShouldDropMagEmpty = true
+SWEP.ShouldDropMag = false
+SWEP.DropMagazineModel = "models/pacagma/KF2Weapons/shotguns/quadbarrel/doomstickloader.mdl"
+SWEP.DropMagazineSounds = {"physics/metal/weapon_impact_soft1.wav", "physics/metal/weapon_impact_soft2.wav", "physics/metal/weapon_impact_soft3.wav"}
+SWEP.DropMagazineAmount = 1
+SWEP.DropMagazineQCA = 1
+--SWEP.DropMagazineTime = 1.0
+SWEP.DropMagazineAng = Angle(0, -70, 0)
 
 -------------------------- SOUNDS
 
@@ -293,7 +302,7 @@ SWEP.Animations = {
 	["reload_elite"] = {
         Source = "Reload_Half_Elite",
         FireASAP = true,
-        --EjectAt = 15,
+        EjectAt = 15/60,
         EventTable = {
             {s = "KF2.BarrelOpenLatch", t = 11 / 60},
             {s = "KF2.BarrelQuickReloadIn", t = 35 / 60},
@@ -303,7 +312,7 @@ SWEP.Animations = {
     },
 	["reload_empty_elite"] = {
         Source = "Reload_Empty_Elite",
-       -- EjectAt = 15,
+        EjectAt = 15/60,
         FireASAP = true,
         EventTable = {
             {s = "KF2.BarrelOpenLatch", t = 11 / 60},
@@ -400,12 +409,22 @@ SWEP.AttachmentElements = {
 SWEP.Attachments = {
     {
         PrintName = "Perks",
-        Category = "kf2_perks_tactical_reload_support"
+        Category = 
+    {
+        "KF2.Perks.Elite.Reload.Support",
+        "KF2.Perks.High.Capacity.Mags.Support",
+        "KF2.Perks.Salvo.Support",
+        "KF2.Perks.Penetration.Support",
+        "KF2.Perks.Armor.Pierce.Support",
+        "KF2.Perks.Tight.Choke.Support",
+        "KF2.Perks.Ressuply.Pack.Support",
+        "KF2.Perks.Concussion.Rounds.Support",
+    }
     },
     {
 
         PrintName = "Skins",
         Category = "kf2_skins_quadbarrel",
-    CosmeticOnly = true,
+        CosmeticOnly = true,
     },
 }

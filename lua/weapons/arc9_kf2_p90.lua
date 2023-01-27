@@ -422,7 +422,7 @@ SWEP.AttachmentElements = {
 SWEP.Attachments = {
     {
         PrintName = "Perks",
-        Category = "kf2_perks_tactical_reload_swat"
+        Category = "kf2_perks_tactical_reload_p90"
     },
     {
 

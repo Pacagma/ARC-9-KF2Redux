@@ -56,7 +56,7 @@ SWEP.PhysBulletDrag = 1.15
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "SMG1" -- What ammo type this gun uses.
+SWEP.Ammo = "Buckshot" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 4 -- Self-explanatory.
@@ -134,15 +134,16 @@ SWEP.VisualRecoilPunch = 1
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.19
+SWEP.Spread = 0.03
+SWEP.Num = 8
 
 SWEP.SpreadAddRecoil = 0.0002 -- Applied per unit of recoil.
 
 SWEP.SpreadAddMove = 0.07
 SWEP.SpreadAddMidAir = 0.1
-SWEP.SpreadAddHipFire = 0
-SWEP.SpreadAddCrouch = -0.05
-SWEP.SpreadAddSights = -0.03
+SWEP.SpreadAddHipFire = 0.25
+SWEP.SpreadAddCrouch = 0.050
+SWEP.SpreadAddSights = 0.19
 
 -------------------------- HANDLING
 
@@ -221,8 +222,8 @@ SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_1"
-SWEP.AfterShotParticle = "barrel_smoke_plume"
+SWEP.MuzzleParticle = "muzzleflash_slug"
+SWEP.AfterShotParticle = "barrel_smoke"
 SWEP.MuzzleEffectQCA = 1
 SWEP.ProceduralViewQCA = 1
 SWEP.CaseEffectQCA = 2 --Shell Attachment
@@ -235,15 +236,15 @@ SWEP.ShellModel = "models/pacagma/KF2Weapons/shotguns/quadbarrel/doomstickloader
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 --SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
-SWEP.ShellTime = 10
+SWEP.ShellTime = 1
 SWEP.NoShellEject = true -- Don't eject shell on fire
-SWEP.ShellSounds = {"", ""}
+SWEP.ShellSounds = {"physics/metal/weapon_impact_soft1.wav", "physics/metal/weapon_impact_soft2.wav", "physics/metal/weapon_impact_soft3.wav"}
 SWEP.CustomizePos = Vector(19, 35, 2)
 
 SWEP.ShouldDropMagEmpty = true
 SWEP.ShouldDropMag = true
 SWEP.DropMagazineModel = "models/pacagma/KF2Weapons/shotguns/quadbarrel/shell.mdl"
-SWEP.DropMagazineSounds = {"physics/metal/weapon_impact_soft1.wav", "physics/metal/weapon_impact_soft2.wav", "physics/metal/weapon_impact_soft3.wav"}
+SWEP.DropMagazineSounds = {"arc9/casings/casing_22_1.wav", "arc9/casings/casing_22_2.wav", "arc9/casings/casing_22_3.wav.wav","arc9/casings/casing_22_4.wav.wav",}
 SWEP.DropMagazineAmount = 4
 SWEP.DropMagazineQCA = 1
 SWEP.DropMagazineTime = 1.1

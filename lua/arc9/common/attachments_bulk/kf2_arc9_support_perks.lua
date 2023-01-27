@@ -17,8 +17,6 @@ ATT.Free = false
 
 ATT.Category = {"KF2.Perks.Elite.Reload.Support"}
 
-ATT.DropMagazineTime = 1.0
-
 ATT.Hook_TranslateAnimation = function(wep, anim)
     if anim == "reload" then
         return "reload_elite"

@@ -135,9 +135,9 @@ SWEP.SprintToFireTime = 0.3 -- How long it takes to go from sprinting to being a
 
 SWEP.Bash = true
 SWEP.PrimaryBash = false
-SWEP.BashDamage = 27
-SWEP.PreBashTime = 1
-SWEP.PostBashTime = 1
+SWEP.BashDamage = 9
+SWEP.PreBashTime = 0.5
+SWEP.PostBashTime = 0.5
 
 -------------------------- TRACERS
 
@@ -282,8 +282,8 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
     },
-    ["idle_sights"] = {
-        Source = "Idle_Iron",
+    ["idle_empty"] = {
+        Source = "idle_empty",
     },
     ["enter_sprint"] = {
         Source = "Sprint_In",
@@ -296,7 +296,7 @@ SWEP.Animations = {
     },
     ["inspect"] = {
         Source = {"Guncheck_v1"},
-        MinProgress = 0.1,
+        MinProgress = 0.3,
         FireASAP = true,
         EventTable = {
             {s = "KF2.BarrelOpenLatch", t = 12 / 30},
@@ -305,7 +305,7 @@ SWEP.Animations = {
     },
     ["1_inspect"] = {
         Source = {"Guncheck_v2"},
-        MinProgress = 0.1,
+        MinProgress = 0.3,
         FireASAP = true,
         EventTable = {
             { s = "KF2.Barrel.Rustle", t = 1 / 60 },
@@ -314,6 +314,7 @@ SWEP.Animations = {
     },
     ["bash"] = {
         Source = {"Bash"},
+        { s = "KF2.Barrel.Cloth", t = 1 / 40 },
     },
 }
 

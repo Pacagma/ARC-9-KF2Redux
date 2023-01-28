@@ -233,7 +233,7 @@ SWEP.ShouldDropMag = false
 SWEP.DropMagazineModel = "models/pacagma/KF2Weapons/submachine/P90Mag.mdl"
 SWEP.DropMagazineSounds = {"physics/metal/weapon_impact_soft1.wav", "physics/metal/weapon_impact_soft2.wav", "physics/metal/weapon_impact_soft3.wav"}
 SWEP.DropMagazineAmount = 1
-SWEP.DropMagazineTime = 1.47
+--SWEP.DropMagazineTime = 1.47
 SWEP.DropMagazineQCA = 3
 SWEP.DropMagazineAng = Angle(0, -70, 0)
 
@@ -300,6 +300,7 @@ SWEP.Animations = {
         Source = "reload_empty",
 		MinProgress = 0.75,
 		FireASAP = true,
+        --DropMagAt = 99999,
         IKTimeLine = {
             {
                 t = 0,

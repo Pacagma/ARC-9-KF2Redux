@@ -25,7 +25,7 @@ SWEP.Slot = 4
 
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
-SWEP.WorldModelMirror = "models/pacagma/KF2Weapons/shotguns/quadbarrel/doomstickworld.mdl"
+SWEP.WorldModelMirror = "models/pacagma/KF2Weapons/shotguns/quadbarrel/doomstick.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-17, 6, -6.5),
     Ang = Angle(-5, 0, 180),
@@ -272,10 +272,16 @@ SWEP.ShootPitchVariation = 0
 
 SWEP.Animations = {
     ["fire"] = {
-        Source = {"Shoot"},
+        Source = "Shoot_Single",
+    },
+    ["fire_sights"] = {
+        Source = "Shoot_Single_Iron",
     },
 	["fire_alt"] = {
-        Source = {"ShootAlt"},
+        Source = "Shoot_Double",
+    },
+    ["fire_alt_sights"] = {
+        Source = "Shoot_Double_Iron",
     },
     ["reload"] = {
         Source = "reload_half",
@@ -348,7 +354,7 @@ SWEP.Animations = {
         Source = "Sprint_Out",
     },
     ["inspect"] = {
-        Source = {"Guncheck_v1"},
+        Source = "Guncheck_v1",
         MinProgress = 0.1,
         FireASAP = true,
         EventTable = {
@@ -357,7 +363,7 @@ SWEP.Animations = {
         },
     },
     ["1_inspect"] = {
-        Source = {"Guncheck_v2"},
+        Source = "Guncheck_v2",
         MinProgress = 0.1,
         FireASAP = true,
         EventTable = {
@@ -366,7 +372,7 @@ SWEP.Animations = {
         },
     },
     ["2_inspect"] = {
-        Source = {"Guncheck_v3"},
+        Source = "Guncheck_v3",
         MinProgress = 0.1,
         FireASAP = true,
         EventTable = {
@@ -375,8 +381,11 @@ SWEP.Animations = {
         },
     },
     ["bash"] = {
-        Source = {"Bash"},
-        { s = "KF2.Barrel.Cloth", t = 1 / 40 },
+        Source = "Bash",
+        EventTable = {
+            { s = "KF2.M99.Rustle", t = 9 / 40 },
+            { s = "KF2.Weapon.Bash.Cloth", t = 11 / 40 },
+        },
     },
 }
 

@@ -260,10 +260,10 @@ SWEP.ShootPitchVariation = 0
 
 SWEP.Animations = {
     ["fire"] = {
-        Source = {"Shoot"},
+        Source = {"ShootLoop"},
     },
 	["fire_alt"] = {
-        Source = {"ShootAlt"},
+        Source = {"Shoot"},
     },
     ["reload"] = {
         Source = "reload_half",

@@ -25,7 +25,7 @@ SWEP.Slot = 4
 
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
-SWEP.WorldModelMirror = "models/pacagma/KF2Weapons/shotguns/quadbarrel/doomstickworld.mdl"
+SWEP.WorldModelMirror = "models/pacagma/KF2Weapons/specials/rpg-7/rpg-7.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-17, 6, -6.5),
     Ang = Angle(-5, 0, 180),
@@ -69,7 +69,7 @@ SWEP.Crosshair = true
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 21
+SWEP.RPM = 1000
 --SWEP.PushBackForce = 180
 
 SWEP.Firemodes = {
@@ -241,30 +241,24 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"Shoot"},
     },
-    ["fire_ads"] = {
+    ["fire_sights"] = {
         Source = {"Shoot_Iron"},
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-		MinProgress = 0.83,
+		MinProgress = 0.53,
 		FireASAP = true,
        -- EjectAt = 3,
         EventTable = {
             {s = "KF2.BarrelOpenLatch", t = 34 / 120},
-            {s = "KF2.BarrelBulletIn", t = 142 / 120},
-            {s = "KF2.BarrelBulletIn", t = 191 / 120},
-            {s = "KF2.BarrelCloseLatch", t = 281 / 120},
         },
     },
 	["reload_empty_elite"] = {
         Source = "Reload_Empty_Elite",
-        --EjectAt = 15/60,
+        MinProgress = 0.5,
         FireASAP = true,
         EventTable = {
             {s = "KF2.BarrelOpenLatch", t = 11 / 60},
-            {s = "KF2.BarrelQuickReloadIn", t = 35 / 60},
-            {s = "KF2.BarrelQuickReloadLock", t = 45 / 60},
-            {s = "KF2.BarrelCloseLatch", t = 71 / 60},
         },
     },
     ["draw"] = {
@@ -300,7 +294,6 @@ SWEP.Animations = {
         FireASAP = true,
         EventTable = {
             {s = "KF2.BarrelOpenLatch", t = 12 / 30},
-            {s = "KF2.BarrelCloseLatch", t = 33 / 30},
         },
     },
     ["1_inspect"] = {
@@ -309,7 +302,6 @@ SWEP.Animations = {
         FireASAP = true,
         EventTable = {
             { s = "KF2.Barrel.Rustle", t = 1 / 60 },
-            { s = "KF2.Barrel.Rustle", t = 56 / 60 },
         },
     },
     ["bash"] = {

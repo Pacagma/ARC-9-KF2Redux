@@ -217,7 +217,8 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 SWEP.ShellTime = 1
 SWEP.NoShellEject = true -- Don't eject shell on fire
 SWEP.ShellSounds = {"arc9/casings/casing_22_1.wav", "arc9/casings/casing_22_2.wav", "arc9/casings/casing_22_3.wav.wav","arc9/casings/casing_22_4.wav.wav"}
-SWEP.CustomizePos = Vector (19, 25, 1)
+
+SWEP.CustomizePos = Vector (19, 25, 1) -- WEAPON POSITION IN THE UI
 
 SWEP.ShouldDropMagEmpty = true
 SWEP.ShouldDropMag = true

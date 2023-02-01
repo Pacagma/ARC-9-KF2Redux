@@ -29,8 +29,8 @@ SWEP.WorldModelMirror = "models/pacagma/KF2Weapons/specials/rpg-7/rpg-7.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-17, 6, -6.5),
     Ang = Angle(-5, 0, 180),
-    TPIKPos = Vector(-15, 4, 0),
-    TPIKAng = Angle(0, 0, 175),
+    TPIKPos = Vector(0, 4, -7),
+    TPIKAng = Angle(0, 0, 180),
     Scale = 1,
 }
 

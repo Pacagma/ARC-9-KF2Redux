@@ -29,8 +29,8 @@ SWEP.WorldModelMirror = "models/pacagma/KF2Weapons/revolvers/sw500/sw500.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-17, 6, -6.5),
     Ang = Angle(-5, 0, 180),
-    TPIKPos = Vector(-15, 4, 0),
-    TPIKAng = Angle(0, 0, 175),
+    TPIKPos = Vector(3, 5, -10),
+    TPIKAng = Angle(0, 0, 180),
     Scale = 1,
 }
 
@@ -204,30 +204,30 @@ SWEP.MuzzleParticle = "muzzleflash_pistol_deagle"
 SWEP.AfterShotParticle = "barrel_smoke"
 SWEP.MuzzleEffectQCA = 1
 SWEP.ProceduralViewQCA = 1
-SWEP.CaseEffectQCA = 2 --Shell Attachment
+--SWEP.CaseEffectQCA = 4 --Shell Attachment
 
 SWEP.CamQCA = 1
 SWEP.CamQCA_Mult = 1
 SWEP.CamCoolView = true
 
-SWEP.ShellModel = "models/pacagma/KF2Weapons/shotguns/quadbarrel/doomstickloader.mdl"
+SWEP.ShellModel = "models/pacagma/KF2Weapons/revolvers/sw500/casing.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 --SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 SWEP.ShellTime = 1
 SWEP.NoShellEject = true -- Don't eject shell on fire
-SWEP.ShellSounds = {"physics/metal/weapon_impact_soft1.wav", "physics/metal/weapon_impact_soft2.wav", "physics/metal/weapon_impact_soft3.wav"}
-SWEP.CustomizePos = Vector(19, 35, 2)
+SWEP.ShellSounds = {"arc9/casings/casing_22_1.wav", "arc9/casings/casing_22_2.wav", "arc9/casings/casing_22_3.wav.wav","arc9/casings/casing_22_4.wav.wav"}
+SWEP.CustomizePos = Vector(0, 0, 0)
 
 SWEP.ShouldDropMagEmpty = true
 SWEP.ShouldDropMag = true
 SWEP.DropMagazineModel = "models/pacagma/KF2Weapons/revolvers/SW500/speedloader.mdl"
-SWEP.DropMagazineSounds = {"arc9/casings/casing_22_1.wav", "arc9/casings/casing_22_2.wav", "arc9/casings/casing_22_3.wav.wav","arc9/casings/casing_22_4.wav.wav",}
-SWEP.DropMagazineAmount = 4
-SWEP.DropMagazineQCA = 1
-SWEP.DropMagazineTime = 1.1
+SWEP.DropMagazineSounds = {"physics/metal/weapon_impact_soft1.wav", "physics/metal/weapon_impact_soft2.wav", "physics/metal/weapon_impact_soft3.wav",}
+SWEP.DropMagazineAmount = 1
+SWEP.DropMagazineQCA = 2
+SWEP.DropMagazineTime = 1.6
 SWEP.DropMagazineVelocity = Vector(0, 0, 0)
-SWEP.DropMagazineAng = Angle(0, -70, 0)
+SWEP.DropMagazineAng = Angle(0, 0, 0)
 
 -------------------------- SOUNDS
 
@@ -255,8 +255,8 @@ SWEP.Animations = {
     ["fire_empty"] = {
         Source = "ShootLast",
     },
-    ["fire_sights"] = {
-        Source = "ShootIron", "ShootIron2", "ShootIron3",
+    ["fire_iron"] = {
+        Source = {"ShootIron", "ShootIron2", "ShootIron3",},
     },
     ["fire_iron_empty"] = {
         Source = "ShootIronLast",
@@ -265,31 +265,39 @@ SWEP.Animations = {
         Source = "reload_half",
 		MinProgress = 0.83,
 		FireASAP = true,
-        --EjectAt = 3,
         EventTable = {
             {s = "KF2.", t = 34 / 120},
+            {shelleject = true, att = 4, t = 42 / 120},
+            {shelleject = true, att = 5, t = 42 / 120},
+            {shelleject = true, att = 6, t = 42 / 120},
+            {shelleject = true, att = 7, t = 42 / 120},
+            {shelleject = true, att = 8, t = 42 / 120},
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
 		MinProgress = 0.83,
 		FireASAP = true,
-       -- EjectAt = 3,
         EventTable = {
             {s = "KF2.", t = 34 / 120},
+            {shelleject = true, att = 4, t = 42 / 120},
+            {shelleject = true, att = 5, t = 42 / 120},
+            {shelleject = true, att = 6, t = 42 / 120},
+            {shelleject = true, att = 7, t = 42 / 120},
+            {shelleject = true, att = 8, t = 42 / 120},
         },
     },
 	["reload_elite"] = {
         Source = "Reload_Half_Elite",
         FireASAP = true,
-        EjectAt = 15/60,
+        --EjectAt = 15/60,
         EventTable = {
             {s = "KF2.", t = 11 / 60},
         },
     },
 	["reload_empty_elite"] = {
         Source = "Reload_Empty_Elite",
-        EjectAt = 15/60,
+        --EjectAt = 15/60,
         FireASAP = true,
         EventTable = {
             {s = "KF2.", t = 11 / 60},
@@ -301,8 +309,20 @@ SWEP.Animations = {
             {s = "KF2.", t = 12 / 40},
         },
     },
+    ["draw_empty"] = {
+        Source = "equip_empty",
+        EventTable = {
+            {s = "KF2.", t = 12 / 40},
+        },
+    },
     ["holster"] = {
         Source = "PutAway",
+        EventTable = {
+            {s = "KF2.", t = 1 / 40},
+        },
+    },
+    ["holster_empty"] = {
+        Source = "PutAway_Empty",
         EventTable = {
             {s = "KF2.", t = 1 / 40},
         },
@@ -310,17 +330,32 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
     },
+    ["idle_empty"] = {
+        Source = "idle_empty",
+    },
     ["idle_sights"] = {
         Source = "idle_iron",
+    },
+    ["idle_sights_empty"] = {
+        Source = "idle_iron_empty",
     },
     ["enter_sprint"] = {
         Source = "Sprint_In",
     },
+    ["enter_sprint_empty"] = {
+        Source = "Sprint_In_Empty",
+    },
     ["idle_sprint"] = {
         Source = "Sprint_Loop",
     },
+    ["idle_sprint_empty"] = {
+        Source = "Sprint_Loop_Empty",
+    },
     ["exit_sprint"] = {
         Source = "Sprint_Out",
+    },
+    ["exit_sprint_empty"] = {
+        Source = "Sprint_Out_Empty",
     },
     ["inspect"] = {
         Source = "Guncheck_v1",
@@ -348,6 +383,12 @@ SWEP.Animations = {
     },
     ["bash"] = {
         Source = "Bash",
+        EventTable = {
+            { s = "KF2.M99.Rustle", t = 9 / 40 },
+        },
+    },
+    ["bash_empty"] = {
+        Source = "Bash_Empty",
         EventTable = {
             { s = "KF2.M99.Rustle", t = 9 / 40 },
         },

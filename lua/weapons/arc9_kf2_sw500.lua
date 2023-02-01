@@ -395,7 +395,7 @@ SWEP.Animations = {
     },
 }
 
---SWEP.Hook_Think	= ARC9.CSGO.BlendEmpty
+SWEP.Hook_Think	= ARC9.KF2.BlendEmpty
 
 -------------------------- ATTACHMENTS
 

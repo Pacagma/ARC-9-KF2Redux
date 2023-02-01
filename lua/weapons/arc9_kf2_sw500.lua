@@ -217,7 +217,7 @@ SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 SWEP.ShellTime = 1
 SWEP.NoShellEject = true -- Don't eject shell on fire
 SWEP.ShellSounds = {"arc9/casings/casing_22_1.wav", "arc9/casings/casing_22_2.wav", "arc9/casings/casing_22_3.wav.wav","arc9/casings/casing_22_4.wav.wav"}
-SWEP.CustomizePos = Vector(0, 0, 0)
+SWEP.CustomizePos = Vector (19, 25, 1)
 
 SWEP.ShouldDropMagEmpty = true
 SWEP.ShouldDropMag = true
@@ -309,12 +309,6 @@ SWEP.Animations = {
             {s = "KF2.", t = 12 / 40},
         },
     },
-    ["draw_empty"] = {
-        Source = "equip_empty",
-        EventTable = {
-            {s = "KF2.", t = 12 / 40},
-        },
-    },
     ["holster"] = {
         Source = "PutAway",
         EventTable = {
@@ -330,32 +324,17 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
     },
-    ["idle_empty"] = {
-        Source = "idle_empty",
-    },
     ["idle_sights"] = {
         Source = "idle_iron",
-    },
-    ["idle_sights_empty"] = {
-        Source = "idle_iron_empty",
     },
     ["enter_sprint"] = {
         Source = "Sprint_In",
     },
-    ["enter_sprint_empty"] = {
-        Source = "Sprint_In_Empty",
-    },
     ["idle_sprint"] = {
         Source = "Sprint_Loop",
     },
-    ["idle_sprint_empty"] = {
-        Source = "Sprint_Loop_Empty",
-    },
     ["exit_sprint"] = {
         Source = "Sprint_Out",
-    },
-    ["exit_sprint_empty"] = {
-        Source = "Sprint_Out_Empty",
     },
     ["inspect"] = {
         Source = "Guncheck_v1",
@@ -383,12 +362,6 @@ SWEP.Animations = {
     },
     ["bash"] = {
         Source = "Bash",
-        EventTable = {
-            { s = "KF2.M99.Rustle", t = 9 / 40 },
-        },
-    },
-    ["bash_empty"] = {
-        Source = "Bash_Empty",
         EventTable = {
             { s = "KF2.M99.Rustle", t = 9 / 40 },
         },

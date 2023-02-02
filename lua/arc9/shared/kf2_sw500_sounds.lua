@@ -1,7 +1,7 @@
 sound.Add( {
     name = "KF2.SW500.ShootOutDoor",
     channel = 10,
-    volume = {100,120},
+    volume = 1.0,
     level = 80,
     --pitch = {97,103},
 	soundlevel = SNDLVL_GUNFIRE,
@@ -21,7 +21,7 @@ sound.Add( {
 sound.Add( {
     name = "KF2.SW500.ShootInDoor",
     channel = 10,
-    volume = {100,120},
+    volume = 1,
     level = 80,
     --pitch = {97,103},
 	soundlevel = SNDLVL_GUNFIRE,
@@ -45,7 +45,7 @@ sound.Add( {
 sound.Add( {
     name = "KF2.SW500.DistantShoot",
     channel = CHAN_WEAPON,
-    volume = 200,
+    volume = 1.0,
     level = 130,
     --pitch = {97,103},
 	soundlevel = SNDLVL_GUNFIRE,
@@ -63,7 +63,7 @@ sound.Add( {
 sound.Add( {
     name = "KF2.SW500.DistantShootInDoor",
     channel = CHAN_WEAPON,
-    volume = 200,
+    volume = 1.0,
     level = 130,
     --pitch = {97,103},
 	soundlevel = SNDLVL_GUNFIRE,
@@ -84,5 +84,26 @@ sound.Add( {
     --pitch = {97,103},
     sound = {
         "kf2/sw500/DryFire/DryFire.ogg",
+    }
+} )
+sound.Add( {
+    name = "KF2.SW500.Hammer",
+    channel = CHAN_STATIC,
+    volume = 1,
+    --level = 100,
+    --pitch = {97,103},
+    sound = {
+        "kf2/sw500/Hammer/Hammer1.ogg",
+        "kf2/sw500/Hammer/Hammer2.ogg",
+    }
+} )
+sound.Add( {
+    name = "KF2.SW500.CylinderOpen",
+    channel = CHAN_STATIC,
+    volume = 1,
+    --level = 100,
+    pitch = {95,110},
+    sound = {
+        "kf2/sw500/CylinderOpen/CylinderOpen1.ogg",
     }
 } )

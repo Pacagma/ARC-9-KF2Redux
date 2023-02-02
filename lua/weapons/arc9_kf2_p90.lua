@@ -4,9 +4,9 @@ SWEP.Base = "arc9_kf2_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - KF2 Weapons Redux"
-SWEP.SubCategory = "Submachine Guns"
+SWEP.SubCategory = "SMG"
 
-SWEP.PrintName = "P90 SMG"
+SWEP.PrintName = "P90"
 
 SWEP.Class = "Submachine Gun"
 

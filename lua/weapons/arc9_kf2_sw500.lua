@@ -4,7 +4,7 @@ SWEP.Base = "arc9_kf2_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - KF2 Weapons Redux"
-SWEP.SubCategory = "Revolvers"
+SWEP.SubCategory = "Pistols"
 
 SWEP.PrintName = ".500 Magnum Revolver"
 
@@ -138,8 +138,8 @@ SWEP.SprintToFireTime = 0.3 -- How long it takes to go from sprinting to being a
 SWEP.Bash = true
 SWEP.PrimaryBash = false
 SWEP.BashDamage = 23
-SWEP.PreBashTime = 0.3
-SWEP.PostBashTime = 0.5
+SWEP.PreBashTime = 0.35
+SWEP.PostBashTime = 1
 
 -------------------------- TRACERS
 
@@ -252,15 +252,27 @@ SWEP.ShootPitchVariation = 0
 SWEP.Animations = {
     ["fire"] = {
         Source = "Shoot",
+        EventTable = {
+            { s = "KF2.SW500.Hammer", t = 18 / 60 },
+        },
     },
     ["fire_empty"] = {
         Source = "ShootLast",
+        EventTable = {
+            { s = "KF2.SW500.Hammer", t = 1 / 60 },
+        },
     },
     ["fire_iron"] = {
         Source = {"ShootIron", "ShootIron2", "ShootIron3",},
+        EventTable = {
+            { s = "KF2.SW500.Hammer", t = 18 / 60 },
+        },
     },
     ["fire_iron_empty"] = {
         Source = "ShootIronLast",
+        EventTable = {
+            { s = "KF2.SW500.Hammer", t = 1 / 60 },
+        },
     },
     ["reload"] = {
         Source = "reload_half",
@@ -286,6 +298,10 @@ SWEP.Animations = {
             {shelleject = true, att = 6, t = 42 / 120},
             {shelleject = true, att = 7, t = 42 / 120},
             {shelleject = true, att = 8, t = 42 / 120},
+
+            EventTable = {
+                {s = "KF2.SW500.CylinderOpen", t = 4 / 60},
+            },
         },
     },
 	["reload_elite"] = {
@@ -307,19 +323,13 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "equip",
         EventTable = {
-            {s = "KF2.", t = 12 / 40},
+            {s = "KF2.AA12.Equip", t = 6 / 40},
         },
     },
     ["holster"] = {
         Source = "PutAway",
         EventTable = {
-            {s = "KF2.", t = 1 / 40},
-        },
-    },
-    ["holster_empty"] = {
-        Source = "PutAway_Empty",
-        EventTable = {
-            {s = "KF2.", t = 1 / 40},
+            {s = "KF2.AA12.PutAway", t = 4 / 40},
         },
     },
     ["idle"] = {
@@ -364,7 +374,8 @@ SWEP.Animations = {
     ["bash"] = {
         Source = "Bash",
         EventTable = {
-            { s = "KF2.M99.Rustle", t = 9 / 40 },
+            { s = "KF2.Pistol.Rattle", t = 2 / 30 },
+            { s = "KF2.Weapon.Bash.Cloth", t = 9 / 30 },
         },
     },
 }

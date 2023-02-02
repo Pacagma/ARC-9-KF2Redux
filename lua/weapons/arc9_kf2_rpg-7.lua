@@ -4,7 +4,7 @@ SWEP.Base = "arc9_kf2_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - KF2 Weapons Redux"
-SWEP.SubCategory = "Launchers"
+SWEP.SubCategory = "Explosive"
 
 SWEP.PrintName = "RPG-7"
 

@@ -18,6 +18,7 @@ ENT.SmokeTrailTime = 0.5
 ENT.Flare = false
 ENT.LifeTime = 10
 ENT.Drunkenness = 0
+ENT.LoopingSound = "KF2.RPG7.PJLoop"
 
 ENT.Drag = true
 ENT.Gravity = true
@@ -239,7 +240,7 @@ if SERVER then
             --self:EmitSound("phx/kaboom.wav", 125, 100, 1, CHAN_AUTO)
         end
 
-        self:EmitSound("CSGO.Frag.Explode")
+        self:EmitSound("KF2.RPG7.Explosions")
 
         util.BlastDamage(self, IsValid(self:GetOwner()) and self:GetOwner() or self, self:GetPos(), self.Radius, self.DamageOverride or self.Damage)
 
@@ -300,7 +301,7 @@ if SERVER then
             end
         end
 
-        self.Entity:EmitSound(Sound("CSGO.Smoke.Bounce"))
+        self.Entity:EmitSound(Sound("KF2.RPG7.Dud.Bounce"))
 
         if self.ImpactDamage and IsValid(tgt) then
             local dmg = DamageInfo()

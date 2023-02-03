@@ -250,9 +250,13 @@ SWEP.Animations = {
         Source = "reload_empty",
 		MinProgress = 0.53,
 		FireASAP = true,
-       -- EjectAt = 3,
         EventTable = {
-            {s = "KF2", t = 34 / 120},
+            {s = "KF2.Cloth.Medium.Movement", t = 2 / 60 },
+            {s = "KF2.Cloth.Quick.Movement", t = 37 / 60},
+            {s = "KF2.RPG7.Reload.A", t = 80 / 60},
+            {s = "KF2.RPG7.Reload.B", t = 81 / 60},
+            {s = "KF2.RPG7.Rocket.Twist", t = 118 / 60},
+            {s = "KF2.Cloth.Quick.Movement", t = 135 / 60},
         },
     },
 	["reload_empty_elite"] = {
@@ -260,19 +264,29 @@ SWEP.Animations = {
         MinProgress = 0.5,
         FireASAP = true,
         EventTable = {
-            {s = "KF2.", t = 11 / 60},
+            {s = "KF2.Cloth.Medium.Movement", t = 2 / 60 },
+            {s = "KF2.RPG7.Reload.A", t = 45 / 60},
+            {s = "KF2.Cloth.Quick.Movement", t = 46 / 60},
+            {s = "KF2.RPG7.Reload.B", t = 63 / 60},
+            {s = "KF2.RPG7.Reload.C", t = 64 / 60},
+            {s = "KF2.Cloth.Quick.Movement", t = 94 / 60},
+            {s = "KF2.RPG7.Sight.Up", t = 94 / 60},
         },
     },
     ["draw"] = {
         Source = "equip",
         EventTable = {
-            {s = "KF2.", t = 12 / 40},
+            {s = "KF2.Cloth.Medium.Movement", t = 2 / 20},
+            {s = "KF2.Cloth.Medium.Movement", t = 13 / 20},
+            {s = "KF2.RPG7.Equip", t = 16 / 20},
         },
     },
     ["holster"] = {
         Source = "PutAway",
         EventTable = {
-            {s = "KF2.", t = 1 / 40},
+            {s = "KF2.Cloth.Medium.Movement", t = 2 / 120 },
+            {s = "KF2.Cloth.Medium.Movement", t = 60 / 120 },
+            {s = "KF2.RPG7.PutAway", t = 62 / 120 },
         },
     },
     ["idle"] = {
@@ -292,23 +306,44 @@ SWEP.Animations = {
     },
     ["inspect"] = {
         Source = "Guncheck_v1",
-        MinProgress = 0.3,
+        MinProgress = 0.1,
         FireASAP = true,
         EventTable = {
-            {s = "KF2.", t = 12 / 30},
+            {s = "KF2.Cloth.Quick.Movement", t = 0 / 30},
+            {s = "KF2.RPG7.Sight.Up", t = 16 / 30},
+            {s = "KF2.RPG7.Sight.Down", t = 35 / 30},
+            {s = "KF2.Cloth.Quick.Movement", t = 43 / 30},
         },
     },
     ["1_inspect"] = {
         Source = "Guncheck_v2",
-        MinProgress = 0.3,
+        MinProgress = 0.1,
         FireASAP = true,
         EventTable = {
-            { s = "KF2.", t = 1 / 60 },
+            {s = "KF2.Cloth.Quick.Movement", t = 0 / 30},
+            {s = "KF2.RPG7.Rocket.Twist", t = 16 / 30},
+            {s = "KF2.Cloth.Medium.Movement", t = 43 / 30 },
+        },
+    },
+    ["inspect_empty"] = {
+        Source = "Guncheck_v1",
+        MinProgress = 0.1,
+        FireASAP = true,
+        EventTable = {
+            {s = "KF2.Cloth.Quick.Movement", t = 0 / 30},
+            {s = "KF2.RPG7.Sight.Up", t = 16 / 30},
+            {s = "KF2.RPG7.Sight.Down", t = 35 / 30},
+            {s = "KF2.Cloth.Quick.Movement", t = 43 / 30},
         },
     },
     ["bash"] = {
         Source = "Bash",
-        { s = "KF2.Barrel.Cloth", t = 1 / 40 },
+        EventTable = {
+            {s = "KF2.Cloth.Medium.Movement", t = 3 / 20 },
+            {s = "KF2.Cloth.Medium.Movement", t = 6 / 20 },
+            {s = "KF2.Weapon.Bash.Cloth", t = 11 / 20 },
+            {s = "KF2.Cloth.Medium.Movement", t = 18 / 20 },
+        },
     },
 }
 

@@ -153,7 +153,7 @@ SWEP.IronSights = {
     ViewModelFOV = 70,
 }
 
-SWEP.ViewModelFOVBase = 90
+SWEP.ViewModelFOVBase = 85
 
 SWEP.SprintPos = Vector(-1, -5, 0)
 SWEP.SprintAng = Angle(-5, 0, 5)
@@ -195,8 +195,8 @@ SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_1"
-SWEP.AfterShotParticle = "barrel_smoke_plume"
+SWEP.MuzzleParticle = "barrel_smoke_plume"
+SWEP.AfterShotParticle = "port_smoke_heavy"
 SWEP.MuzzleEffectQCA = 1
 SWEP.ProceduralViewQCA = 1
 SWEP.CaseEffectQCA = 2 --Shell Attachment
@@ -216,6 +216,7 @@ SWEP.CustomizePos = Vector(19, 35, 2)
 
 SWEP.ShootEnt = "kf2_rocket_rpg" -- Set to an entity to launch it out of this weapon.
 SWEP.ShootEntForce = 10000
+SWEP.AutoReload = true
 
 -------------------------- SOUNDS
 

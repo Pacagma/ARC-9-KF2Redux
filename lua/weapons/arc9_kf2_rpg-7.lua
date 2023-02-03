@@ -215,7 +215,7 @@ SWEP.ShellSounds = {"", ""}
 SWEP.CustomizePos = Vector(19, 35, 2)
 
 SWEP.ShootEnt = "kf2_rocket_rpg" -- Set to an entity to launch it out of this weapon.
-SWEP.ShootEntForce = 1000
+SWEP.ShootEntForce = 10000
 
 -------------------------- SOUNDS
 

@@ -252,7 +252,7 @@ SWEP.Animations = {
 		FireASAP = true,
        -- EjectAt = 3,
         EventTable = {
-            {s = "KF2.BarrelOpenLatch", t = 34 / 120},
+            {s = "KF2", t = 34 / 120},
         },
     },
 	["reload_empty_elite"] = {
@@ -260,19 +260,19 @@ SWEP.Animations = {
         MinProgress = 0.5,
         FireASAP = true,
         EventTable = {
-            {s = "KF2.BarrelOpenLatch", t = 11 / 60},
+            {s = "KF2.", t = 11 / 60},
         },
     },
     ["draw"] = {
         Source = "equip",
         EventTable = {
-            {s = "KF2.BarrelEquip", t = 12 / 40},
+            {s = "KF2.", t = 12 / 40},
         },
     },
     ["holster"] = {
         Source = "PutAway",
         EventTable = {
-            {s = "KF2.BarrelPutAway", t = 1 / 40},
+            {s = "KF2.", t = 1 / 40},
         },
     },
     ["idle"] = {
@@ -295,7 +295,7 @@ SWEP.Animations = {
         MinProgress = 0.3,
         FireASAP = true,
         EventTable = {
-            {s = "KF2.BarrelOpenLatch", t = 12 / 30},
+            {s = "KF2.", t = 12 / 30},
         },
     },
     ["1_inspect"] = {
@@ -303,7 +303,7 @@ SWEP.Animations = {
         MinProgress = 0.3,
         FireASAP = true,
         EventTable = {
-            { s = "KF2.Barrel.Rustle", t = 1 / 60 },
+            { s = "KF2.", t = 1 / 60 },
         },
     },
     ["bash"] = {

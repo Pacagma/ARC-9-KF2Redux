@@ -3,7 +3,7 @@ sound.Add( {
     channel = 10,
     volume = {100,120},
     level = 80,
-    --pitch = {97,103},
+    pitch = {95,110},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
         "kf2/rpg-7/ShootOutDoor/ShootOutDoor1.ogg",
@@ -16,7 +16,7 @@ sound.Add( {
     channel = 10,
     volume = {100,120},
     level = 80,
-    --pitch = {97,103},
+    pitch = {95,110},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
         "kf2/rpg-7/ShootInDoor/ShootInDoor1.ogg",
@@ -38,7 +38,7 @@ sound.Add( {
 sound.Add( {
     name = "KF2.RPG7.DryShoot",
     channel = CHAN_STATIC,
-    volume = 1,
+    volume = 0.3,
     --level = 100,
     --pitch = {97,103},
     sound = {

@@ -209,24 +209,23 @@ SWEP.CamCoolView = true
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 --SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
-SWEP.ShellTime = 10
+SWEP.ShellTime = 1
 SWEP.NoShellEject = true -- Don't eject shell on fire
 SWEP.ShellSounds = {"", ""}
 SWEP.CustomizePos = Vector(19, 35, 2)
 
 SWEP.ShootEnt = "kf2_rocket_rpg" -- Set to an entity to launch it out of this weapon.
 SWEP.ShootEntForce = 1000
-SWEP.SetFuseTime = 0
 
 -------------------------- SOUNDS
 
 local path = "sound/kf2/rpg-7/"
 
---SWEP.ShootSound = "KF2.Barrel.ShootOutDoor"
---SWEP.ShootSoundIndoor = "KF2.Barrel.ShootInDoor"
+SWEP.ShootSound = "KF2.RPG7.ShootOutDoor"
+SWEP.ShootSoundIndoor = "KF2.RPG7.ShootInDoor"
+SWEP.DistantShootSound = "KF2.RPG7.DistantShoot"
+SWEP.DryFireSound = "KF2.RPG7.DryShoot"
 --SWEP.DistantShootSoundIndoor = "KF2.Barrel.DistantShoot"
---SWEP.DistantShootSound = "KF2.Barrel.DistantShoot"
-SWEP.DryFireSound = "KF2.Barrel.DryShoot"
 --SWEP.FiremodeSound = "KF2.FireModeSwitch"
 --SWEP.ShootSoundTail = ""
 --SWEP.FirstShootSound = ""
@@ -239,10 +238,13 @@ SWEP.ShootPitchVariation = 0
 
 SWEP.Animations = {
     ["fire"] = {
-        Source = {"Shoot"},
+        Source = "Shoot",
     },
-    ["fire_sights"] = {
-        Source = {"Shoot_Iron"},
+    ["fire_iron"] = {
+        Source = "Shoot_Iron",
+    },
+    ["fire_empty"] = {
+        Source = "Shoot_Last",
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -276,8 +278,8 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
     },
-    ["idle_empty"] = {
-        Source = "idle_empty",
+    ["idle_sights"] = {
+        Source = "Idle_Iron",
     },
     ["enter_sprint"] = {
         Source = "Sprint_In",
@@ -289,7 +291,7 @@ SWEP.Animations = {
         Source = "Sprint_Out",
     },
     ["inspect"] = {
-        Source = {"Guncheck_v1"},
+        Source = "Guncheck_v1",
         MinProgress = 0.3,
         FireASAP = true,
         EventTable = {
@@ -297,7 +299,7 @@ SWEP.Animations = {
         },
     },
     ["1_inspect"] = {
-        Source = {"Guncheck_v2"},
+        Source = "Guncheck_v2",
         MinProgress = 0.3,
         FireASAP = true,
         EventTable = {
@@ -305,10 +307,12 @@ SWEP.Animations = {
         },
     },
     ["bash"] = {
-        Source = {"Bash"},
+        Source = "Bash",
         { s = "KF2.Barrel.Cloth", t = 1 / 40 },
     },
 }
+
+SWEP.Hook_Think	= ARC9.KF2.BlendEmpty
 
 --SWEP.Hook_Think	= ARC9.CSGO.BlendEmpty
 

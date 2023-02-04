@@ -252,12 +252,12 @@ SWEP.Animations = {
 		MinProgress = 0.53,
 		FireASAP = true,
         EventTable = {
-            {s = "KF2.Cloth.Medium.Movement", t = 2 / 60 },
-            {s = "KF2.Cloth.Quick.Movement", t = 37 / 60},
-            {s = "KF2.RPG7.Reload.A", t = 80 / 60},
-            {s = "KF2.RPG7.Reload.B", t = 81 / 60},
-            {s = "KF2.RPG7.Rocket.Twist", t = 118 / 60},
-            {s = "KF2.Cloth.Quick.Movement", t = 135 / 60},
+            {s = "KF2.Cloth.Medium.Movement", t = 6 / 60 },
+            {s = "KF2.Cloth.Quick.Movement", t = 53 / 60},
+            {s = "KF2.RPG7.Reload.A", t = 83 / 60},
+            {s = "KF2.RPG7.Reload.B", t = 86 / 60},
+            {s = "KF2.RPG7.Rocket.Twist", t = 120 / 60},
+            {s = "KF2.Cloth.Quick.Movement", t = 145 / 60},
         },
     },
 	["reload_empty_elite"] = {
@@ -265,29 +265,29 @@ SWEP.Animations = {
         MinProgress = 0.5,
         FireASAP = true,
         EventTable = {
-            {s = "KF2.Cloth.Medium.Movement", t = 2 / 60 },
-            {s = "KF2.RPG7.Reload.A", t = 45 / 60},
-            {s = "KF2.Cloth.Quick.Movement", t = 46 / 60},
-            {s = "KF2.RPG7.Reload.B", t = 63 / 60},
-            {s = "KF2.RPG7.Reload.C", t = 64 / 60},
-            {s = "KF2.Cloth.Quick.Movement", t = 94 / 60},
-            {s = "KF2.RPG7.Sight.Up", t = 94 / 60},
+            {s = "KF2.Cloth.Medium.Movement", t = 6 / 60 },
+            {s = "KF2.RPG7.Reload.A", t = 51 / 60},
+            {s = "KF2.Cloth.Quick.Movement", t = 53 / 60},
+            {s = "KF2.RPG7.Reload.B", t = 76 / 60},
+            {s = "KF2.RPG7.Reload.C", t = 80 / 60},
+            {s = "KF2.Cloth.Quick.Movement", t = 96 / 60},
+            {s = "KF2.RPG7.Sight.Up", t = 97 / 60},
         },
     },
     ["draw"] = {
         Source = "equip",
         EventTable = {
-            {s = "KF2.Cloth.Medium.Movement", t = 2 / 20},
-            {s = "KF2.Cloth.Medium.Movement", t = 13 / 20},
-            {s = "KF2.RPG7.Equip", t = 16 / 20},
+            {s = "KF2.Cloth.Medium.Movement", t = 2 / 30},
+            {s = "KF2.Cloth.Medium.Movement", t = 21 / 30},
+            {s = "KF2.RPG7.Equip", t = 30 / 30},
         },
     },
     ["holster"] = {
         Source = "PutAway",
         EventTable = {
-            {s = "KF2.Cloth.Medium.Movement", t = 2 / 120 },
-            {s = "KF2.Cloth.Medium.Movement", t = 60 / 120 },
-            {s = "KF2.RPG7.PutAway", t = 62 / 120 },
+            {s = "KF2.Cloth.Medium.Movement", t = 6 / 100.83 },
+            {s = "KF2.Cloth.Medium.Movement", t = 59 / 100.83 },
+            {s = "KF2.RPG7.PutAway", t = 61 / 100.83 },
         },
     },
     ["idle"] = {
@@ -310,10 +310,10 @@ SWEP.Animations = {
         MinProgress = 0.1,
         FireASAP = true,
         EventTable = {
-            {s = "KF2.Cloth.Quick.Movement", t = 0 / 30},
+            {s = "KF2.Cloth.Quick.Movement", t = 2 / 30},
             {s = "KF2.RPG7.Sight.Up", t = 16 / 30},
-            {s = "KF2.RPG7.Sight.Down", t = 35 / 30},
-            {s = "KF2.Cloth.Quick.Movement", t = 43 / 30},
+            {s = "KF2.RPG7.Sight.Down", t = 36 / 30},
+            {s = "KF2.Cloth.Quick.Movement", t = 44 / 30},
         },
     },
     ["1_inspect"] = {
@@ -321,9 +321,9 @@ SWEP.Animations = {
         MinProgress = 0.1,
         FireASAP = true,
         EventTable = {
-            {s = "KF2.Cloth.Quick.Movement", t = 0 / 30},
-            {s = "KF2.RPG7.Rocket.Twist", t = 16 / 30},
-            {s = "KF2.Cloth.Medium.Movement", t = 43 / 30 },
+            {s = "KF2.Cloth.Quick.Movement", t = 63 / 900},
+            {s = "KF2.RPG7.Rocket.Twist", t = 600 / 900},
+            {s = "KF2.Cloth.Medium.Movement", t = 1363 / 900 },
         },
     },
     ["inspect_empty"] = {
@@ -340,10 +340,10 @@ SWEP.Animations = {
     ["bash"] = {
         Source = "Bash",
         EventTable = {
-            {s = "KF2.Cloth.Medium.Movement", t = 3 / 20 },
-            {s = "KF2.Cloth.Medium.Movement", t = 6 / 20 },
-            {s = "KF2.Weapon.Bash.Cloth", t = 11 / 20 },
-            {s = "KF2.Cloth.Medium.Movement", t = 18 / 20 },
+            {s = "KF2.Cloth.Medium.Movement", t = 56 / 470 },
+            {s = "KF2.Cloth.Medium.Movement", t = 141 / 470 },
+            {s = "KF2.Weapon.Bash.Cloth", t = 268 / 470 },
+            {s = "KF2.Cloth.Medium.Movement", t = 433 / 470 },
         },
     },
 }

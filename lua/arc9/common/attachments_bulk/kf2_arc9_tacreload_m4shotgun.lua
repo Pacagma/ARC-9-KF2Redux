@@ -12,7 +12,7 @@ ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
 ATT.Free = false
-ATT.ReloadTimeMult = 0.6
+ATT.ReloadTimeMult = 0.7
 
 ATT.Category = {"KF2.Perks.Elite.Reload.M4Shotgun"}
 

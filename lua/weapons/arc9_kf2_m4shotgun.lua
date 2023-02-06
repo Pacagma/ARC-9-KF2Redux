@@ -153,7 +153,7 @@ SWEP.ReloadTime = 0.7
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.26, 0, 1.132),
+    Pos = Vector(-3.26, 0, 1.85),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     ViewModelFOV = 50,
@@ -162,7 +162,7 @@ SWEP.IronSights = {
 
 SWEP.ViewModelFOVBase = 70
 
-SWEP.SprintPos = Vector(-1, -5, 0)
+SWEP.SprintPos = Vector(-1, -5, 5)
 SWEP.SprintAng = Angle(-5, 0, 5)
 
 SWEP.SprintMidPoint = {
@@ -228,22 +228,16 @@ SWEP.CustomizePos = Vector(19, 35, 2)
 
 local path = "sound/kf2/m4shotgun/"
 
-SWEP.ShootSound = "KF2.Barrel.ShootOutDoor"
-SWEP.ShootSoundIndoor = "KF2.Barrel.ShootInDoor"
---SWEP.DistantShootSoundIndoor = "KF2.Barrel.DistantShoot"
-SWEP.DistantShootSound = "KF2.Barrel.DistantShoot"
+SWEP.ShootSound = "KF2.M4Shotgun.ShootOutDoor"
+SWEP.ShootSoundIndoor = "KF2.M4Shotgun.ShootInDoor"
+SWEP.DistantShootSoundIndoor = "KF2.M4Shotgun.DistantShoot"
+SWEP.DistantShootSound = "KF2.M4Shotgun.DistantShoot"
 SWEP.DryFireSound = "KF2.M4Shotgun.DryShoot"
 --SWEP.FiremodeSound = "KF2.FireModeSwitch"
 --SWEP.ShootSoundTail = ""
 --SWEP.FirstShootSound = ""
 --SWEP.ShootSoundLooping = ""
 --SWEP.ShootSoundSilenced = ""
-
-SWEP.ToggleAttSound = {
-    "arc9/toggles/flashlight_laser_toggle_on_01.ogg",
-    "arc9/toggles/flashlight_laser_toggle_on_02.ogg",
-    "arc9/toggles/flashlight_laser_toggle_on_03.ogg",
-}
 
 SWEP.ShootVolume = 100
 SWEP.ShootPitch = 100
@@ -253,27 +247,27 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "Shoot",
         EventTable = {
-            {shelleject = true, att = 2, t = 138 / 800},
+            {shelleject = 1, att = 2, t = 138 / 800},
         },
     },
     ["fire_empty"] = {
         Source = "ShootLast",
         EventTable = {
             {s = "KF2.M4Shotgun.Empty", t = 107 / 800},
-            {shelleject = true, att = 2, t = 138 / 800},
+            {shelleject = 1, att = 2, t = 138 / 800},
         },
     },
     ["fire_iron"] = {
         Source = {"ShootIron", "ShootIron2", "ShootIron3",},
         EventTable = {
-            {shelleject = true, att = 2, t = 138 / 800},
+            {shelleject = 1, att = 2, t = 138 / 800},
         },
     },
     ["fire_iron_empty"] = {
         Source = "ShootIronLast",
         EventTable = {
             { s = "KF2.M4Shotgun.Empty.", t = 107 / 800 },
-            {shelleject = true, att = 2, t = 138 / 800},
+            {shelleject = 1, att = 2, t = 138 / 800},
         },
     },
     ["draw"] = {
@@ -433,5 +427,20 @@ SWEP.Attachments = {
         PrintName = "Skins",
         Category = "kf2_skins_m4shotgun",
         CosmeticOnly = true,
+    },
+    {
+        PrintName = "FlashLights",
+        Category = "KF2.M4Shotgun.FlashLight",
+        Bone = "RW_FlashLight",
+        Installed = "kf2_m4shotgun_flash",
+        --Integral = "kf2_m4shotgun_flash",
+    },
+    {
+        PrintName = "Sights",
+        Category = "KF2.M4Shotgun.Sight",
+        Bone = "RW_Sight",
+        Pos = Vector (0, 0, 0),
+        Installed = "kf2_m4shotgun_sight",
+        --Integral = "kf2_m4shotgun_sight",
     },
 }

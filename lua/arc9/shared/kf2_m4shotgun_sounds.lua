@@ -6,9 +6,10 @@ sound.Add( {
     --pitch = {90,110},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
-        "kf2/m4shotgun/ShootOutDoor/ShootOutDoor1.ogg",
-        "kf2/m4shotgun/ShootOutDoor/ShootOutDoor2.ogg",
-        "kf2/m4shotgun/ShootOutDoor/ShootOutDoor3.ogg",
+        "kf2/m4shotgun/ShootOutDoor/OutDoor1.ogg",
+        "kf2/m4shotgun/ShootOutDoor/OutDoor2.ogg",
+        "kf2/m4shotgun/ShootOutDoor/OutDoor3.ogg",
+        "kf2/m4shotgun/ShootOutDoor/OutDoor4.ogg",
     }
 } )
 sound.Add( {
@@ -19,9 +20,8 @@ sound.Add( {
     --pitch = {90,110},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
-        "kf2/m4shotgun/ShootInDoor/ShootInDoor1.ogg",
-        "kf2/m4shotgun/ShootInDoor/ShootInDoor2.ogg",
-        "kf2/m4shotgun/ShootInDoor/ShootInDoor3.ogg",
+        "kf2/m4shotgun/ShootInDoor/InDoor1.ogg",
+        "kf2/m4shotgun/ShootInDoor/InDoor2.ogg",
     }
 } )
 sound.Add( {
@@ -33,6 +33,25 @@ sound.Add( {
 	--soundlevel = SNDLVL_GUNFIRE,
     sound = {
         "kf2/m4shotgun/ShootDistant/ShootDistant1.ogg",
+        "kf2/m4shotgun/ShootDistant/ShootDistant2.ogg",
+        "kf2/m4shotgun/ShootDistant/ShootDistant3.ogg",
+        "kf2/m4shotgun/ShootDistant/ShootDistant4.ogg",
+        "kf2/m4shotgun/ShootDistant/ShootDistant5.ogg",
+    }
+} )
+sound.Add( {
+    name = "KF2.M4Shotgun.DistantShootInDoor",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 130,
+    --pitch = {97,103},
+	--soundlevel = SNDLVL_GUNFIRE,
+    sound = {
+        "kf2/m4shotgun/ShootDistantInDoor/Distant1.ogg",
+        "kf2/m4shotgun/ShootDistantInDoor/Distant2.ogg",
+        "kf2/m4shotgun/ShootDistantInDoor/Distant3.ogg",
+        "kf2/m4shotgun/ShootDistantInDoor/Distant4.ogg",
+        "kf2/m4shotgun/ShootDistantInDoor/Distant5.ogg",
     }
 } )
 sound.Add( {

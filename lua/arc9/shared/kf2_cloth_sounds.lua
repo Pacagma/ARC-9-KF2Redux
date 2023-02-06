@@ -45,3 +45,20 @@ sound.Add( {
         "kf2/ClothQuickMovement/ClothQuick8.ogg",
     }
 } )
+sound.Add( {
+    name = "KF2.Arm.Swish",
+    channel = CHAN_STATIC,
+    volume = 0.5,
+    --level = 100,
+    --pitch = {97,103},
+    sound = {
+        "kf2/ArmSwish/ArmSwish1.ogg",
+        "kf2/ArmSwish/ArmSwish2.ogg",
+        "kf2/ArmSwish/ArmSwish3.ogg",
+        "kf2/ArmSwish/ArmSwish4.ogg",
+        "kf2/ArmSwish/ArmSwish5.ogg",
+        "kf2/ArmSwish/ArmSwish6.ogg",
+        "kf2/ArmSwish/ArmSwish7.ogg",
+        "kf2/ArmSwish/ArmSwish8.ogg",
+    }
+} )

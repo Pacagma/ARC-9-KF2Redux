@@ -165,7 +165,7 @@ SWEP.IronSights = {
 
 SWEP.ViewModelFOVBase = 70
 
-SWEP.SprintPos = Vector(-1, -5, 5)
+SWEP.SprintPos = Vector(0, 0, 0)
 SWEP.SprintAng = Angle(-5, 0, 5)
 
 SWEP.SprintMidPoint = {
@@ -226,7 +226,7 @@ SWEP.ShellTime = 0.5
 SWEP.NoShellEject = true -- Don't eject shell on fire
 SWEP.ShellSounds = "KF2.Shotgun.Shell"
 
-SWEP.CustomizePos = Vector(17, 35, 2)
+SWEP.CustomizePos = Vector(17, 35, 2) --WEAPON POSITION WHEN PRESSING C
 
 -------------------------- SOUNDS
 

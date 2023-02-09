@@ -21,7 +21,7 @@ SWEP.ViewModel = "models/pacagma/KF2Weapons/shotguns/m4/M4.mdl"
 SWEP.WorldModel = "models/pacagma/KF2Weapons/shotguns/quadbarrel/doomstickworld.mdl"
 SWEP.DefaultBodygroups = "000000000"
 
-SWEP.Slot = 4
+SWEP.Slot = 2
 
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
@@ -222,9 +222,10 @@ SWEP.ShellModel = "models/pacagma/KF2Weapons/shotguns/m4/shell.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 --SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
-SWEP.ShellTime = 0.5
+SWEP.ShellTime = 1
 SWEP.NoShellEject = true -- Don't eject shell on fire
 SWEP.ShellSounds = "KF2.Shotgun.Shell"
+--SWEP.EjectDelay = 0.25
 
 SWEP.CustomizePos = Vector(17, 35, 2) --WEAPON POSITION WHEN PRESSING C
 
@@ -255,37 +256,22 @@ SWEP.ReloadHideBonesTables = {
 SWEP.Animations = {
     ["fire"] = {
         Source = "Shoot",
-        EventTable = {
-            {shelleject = true, att = 2, t = 3 / 60.52},
-            {hide = 1, t = 0 / 60.52 },
-            {hide = 2, t = 0 / 60.52 },
-        },
+        EjectAt = 0.155,
     },
     ["fire_empty"] = {
         Source = "ShootLast",
+        EjectAt = 0.03,
         EventTable = {
             {s = "KF2.M4Shotgun.Empty", t = 3 / 60.52},
-            {shelleject = true, att = 2, t = 3 / 60.52},
-            {hide = 1, t = 0 / 60.52 },
-            {hide = 2, t = 0 / 60.52 },
         },
     },
     ["fire_iron"] = {
         Source = {"ShootIron", "ShootIron2", "ShootIron3",},
-        EventTable = {
-            {shelleject = true, att = 2, t = 3 / 60.52},
-            {hide = 1, t = 0 / 60.52 },
-            {hide = 2, t = 0 / 60.52 },
-        },
+        EjectAt = 0.155,
     },
     ["fire_iron_empty"] = {
         Source = "ShootIronLast",
-        EventTable = {
-            { s = "KF2.M4Shotgun.Empty.", t = 3 / 60.52 },
-            {shelleject = true, att = 2, t = 3 / 60.52 },
-            {hide = 1, t = 0 / 60.52 },
-            {hide = 2, t = 0 / 60.52 },
-        },
+        EjectAt = 0.03,
     },
     ["draw"] = {
         Source = "equip",

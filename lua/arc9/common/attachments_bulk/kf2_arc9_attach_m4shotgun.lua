@@ -6,7 +6,7 @@ ATT.MenuCategory = "ARC9 - KF2 Attachments"
 ATT.PrintName = "M4Shotgun Flashlight"
 ATT.Description = [[]]
 
-ATT.Icon = Material("entities/arc9_att_tac_flashlight.png", "mips smooth")
+ATT.Icon = Material("entities/attachments/M4Shotgun/M4ShotgunLight.png", "mips smooth")
 
 ATT.SortOrder = 0
 ATT.Category = "KF2.M4Shotgun.FlashLight"
@@ -42,7 +42,7 @@ ATT.MenuCategory = "ARC9 - KF2 Attachments"
 ATT.PrintName = "M4Shotgun Sight"
 ATT.Description = [[]]
 
-ATT.Icon = Material("entities/arc9_att_tac_flashlight.png", "mips smooth")
+ATT.Icon = Material("entities/attachments/M4Shotgun/M4ShotgunSight.png", "mips smooth")
 
 ATT.SortOrder = 1
 ATT.Category = "KF2.M4Shotgun.Sight"

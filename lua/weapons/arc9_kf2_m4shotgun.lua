@@ -471,14 +471,15 @@ SWEP.Attachments = {
         CosmeticOnly = true,
     },
     {
-        PrintName = "FlashLights",
+        PrintName = "Flashlight",
         Category = "KF2.M4Shotgun.FlashLight",
         Bone = "RW_FlashLight",
+        Pos = Vector (0, 0, 0),
         Installed = "kf2_m4shotgun_flash",
         --Integral = "kf2_m4shotgun_flash",
     },
     {
-        PrintName = "Sights",
+        PrintName = "Sight",
         Category = "KF2.M4Shotgun.Sight",
         Bone = "RW_Sight",
         Pos = Vector (0, 0, 0),

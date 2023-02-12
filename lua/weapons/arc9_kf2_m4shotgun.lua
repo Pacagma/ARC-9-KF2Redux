@@ -231,7 +231,7 @@ SWEP.CustomizePos = Vector(17, 35, 2) --WEAPON POSITION WHEN PRESSING C
 
 -------------------------- SOUNDS
 
-local path = "sound/kf2/m4shotgun/"
+local path = "sound/kf2/"
 
 SWEP.ShootSound = "KF2.M4Shotgun.ShootOutDoor"
 SWEP.ShootSoundIndoor = "KF2.M4Shotgun.ShootInDoor"

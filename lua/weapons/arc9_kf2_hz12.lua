@@ -76,7 +76,6 @@ SWEP.Firemodes = {
     {
         Mode = 1,
 		PrintName = "Multi-Action",
-        ManualActionChamber = 2,
         -- add other attachment modifiers
     },
 }
@@ -158,7 +157,7 @@ SWEP.TracerColor = Color(255, 255, 155) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.26, 0, 1.85),
+    Pos = Vector(-2.95, 0, 1.15),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     ViewModelFOV = 70,
@@ -213,8 +212,9 @@ SWEP.AnimDraw = false
 SWEP.MuzzleParticle = "muzzleflash_slug"
 SWEP.AfterShotParticle = "barrel_smoke"
 SWEP.MuzzleEffectQCA = 1
+SWEP.MuzzleEffectQCAEvenShot = 2
 SWEP.ProceduralViewQCA = 1
-SWEP.CaseEffectQCA = 2 --Shell Attachment
+SWEP.CaseEffectQCA = nill --Shell Attachment
 
 SWEP.CamQCA = 1
 SWEP.CamQCA_Mult = 1
@@ -233,13 +233,13 @@ SWEP.CustomizePos = Vector(17, 35, 2) --WEAPON POSITION WHEN PRESSING C
 
 -------------------------- SOUNDS
 
-local path = "sound/kf2/hz12/"
+local path = "sound/kf2/"
 
-SWEP.ShootSound = "KF2."
-SWEP.ShootSoundIndoor = "KF2."
-SWEP.DistantShootSoundIndoor = "KF2."
-SWEP.DistantShootSound = "KF2."
-SWEP.DryFireSound = "KF2."
+SWEP.ShootSound = "KF2.HZ12.ShootOutDoor"
+SWEP.ShootSoundIndoor = "KF2.HZ12.ShootInDoor"
+SWEP.DistantShootSoundIndoor = "KF2.HZ12.DistantShoot"
+SWEP.DistantShootSound = "KF2.HZ12.DistantShoot"
+SWEP.DryFireSound = "KF2.HZ12.DryShoot"
 --SWEP.FiremodeSound = "KF2.FireModeSwitch"
 --SWEP.ShootSoundTail = ""
 --SWEP.FirstShootSound = ""
@@ -252,33 +252,38 @@ SWEP.ShootPitchVariation = 0
 
 SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
 SWEP.ManualActionNoLastCycle = true -- Do not cycle on the last shot.
---SWEP.ManualActionChamber = 2 -- How many shots we go between needing to cycle again.
+SWEP.ManualActionChamber = 2 -- How many shots we go between needing to cycle again.
 SWEP.CycleTime = 0.75
 
 
+SWEP.Akimbo = true
+SWEP.RPMOverrideOddShot = 60
 SWEP.Animations = {
-    ["fire"] = {
-        Source = "Shoot",
-        EventTable = {
-            { s = "KF2.", t = 18 / 60 },
-        },
-    },
-    ["fire_empty"] = {
+    ["fire_left"] = {
         Source = "ShootLast",
         EventTable = {
-            { s = "KF2.", t = 1 / 60 },
+            {s = "KF2.HZ12.PumpBack", t = 40 / 120.52},
+            {s = "KF2.HZ12.PumpForward", t = 66 / 120.52},
+            {shelleject = true, att = 3, t = 50 / 120.52},
+            {shelleject = true, att = 4, t = 50 / 120.52},
         },
     },
-    ["fire_iron"] = {
+    ["fire_right"] = {
+        Source = "Shoot",
+    },
+    ["fire_left_iron"] = {
+        Source = "ShootIronLast",
+        EventTable = {
+            {s = "KF2.HZ12.PumpBack", t = 40 / 120.52},
+            {s = "KF2.HZ12.PumpForward", t = 66 / 120.52},
+            {shelleject = true, att = 3, t = 50 / 120.52},
+            {shelleject = true, att = 4, t = 50 / 120.52},
+        },
+    },
+    ["fire_right_iron"] = {
         Source = {"ShootIron", "ShootIron2", "ShootIron3",},
         EventTable = {
             { s = "KF2.", t = 18 / 60 },
-        },
-    },
-    ["fire_iron_empty"] = {
-        Source = "ShootIronLast",
-        EventTable = {
-            { s = "KF2.", t = 1 / 60 },
         },
     },
     ["reload"] = {
@@ -286,8 +291,9 @@ SWEP.Animations = {
 		MinProgress = 0.83,
 		FireASAP = true,
         EventTable = {
-            {s = "KF2.", t = 34 / 120},
-            {shelleject = true, att = 4, t = 42 / 120},
+            {s = "KF2.HZ12.MagOut", t = 42 / 60.22},
+            {s = "KF2.HZ12.MagPre", t = 135 / 60.22},
+            {s = "KF2.HZ12.MagIn", t = 147 / 60.22},
         },
     },
     ["reload_empty"] = {
@@ -295,40 +301,43 @@ SWEP.Animations = {
 		MinProgress = 0.83,
 		FireASAP = true,
         EventTable = {
-            {s = "KF2.", t = 34 / 120},
-            {shelleject = true, att = 4, t = 42 / 120},
-            {shelleject = true, att = 5, t = 42 / 120},
-            EventTable = {
-                {s = "KF2.", t = 4 / 60},
-            },
+            {s = "KF2.HZ12.MagOut", t = 35 / 60.25},
+            {s = "KF2.HZ12.MagPre", t = 96 / 60.25},
+            {s = "KF2.HZ12.MagIn", t = 106 / 60.25},
+            {s = "KF2.HZ12.PumpBack", t = 137 / 60.25},
+            {s = "KF2.HZ12.PumpForward", t = 146 / 60.25},
         },
     },
 	["reload_elite"] = {
         Source = "Reload_Half_Elite",
         FireASAP = true,
-        --EjectAt = 15/60,
         EventTable = {
-            {s = "KF2.", t = 11 / 60},
+            {s = "KF2.HZ12.MagOut", t = 23 / 60.28},
+            {s = "KF2.HZ12.MagPre", t = 94 / 60.28},
+            {s = "KF2.HZ12.MagIn", t = 102 / 60.28},
         },
     },
 	["reload_empty_elite"] = {
         Source = "Reload_Empty_Elite",
-        --EjectAt = 15/60,
         FireASAP = true,
         EventTable = {
-            {s = "KF2.", t = 11 / 60},
+            {s = "KF2.HZ12.MagOut", t = 22 / 60.3},
+            {s = "KF2.HZ12.MagPre", t = 66 / 60.3},
+            {s = "KF2.HZ12.MagIn", t = 73 / 60.3},
+            {s = "KF2.HZ12.PumpBack", t = 103 / 60.3},
+            {s = "KF2.HZ12.PumpForward", t = 113 / 60.3},
         },
     },
     ["draw"] = {
         Source = "Equip",
         EventTable = {
-            {s = "KF2.", t = 6 / 40},
+            {s = "KF2.HZ12.Equip", t = 1 / 32.704},
         },
     },
     ["holster"] = {
         Source = "PutAway",
         EventTable = {
-            {s = "KF2.", t = 4 / 40},
+            {s = "KF2.HZ12.PutAway", t = 5 / 50.176},
         },
     },
     ["idle"] = {
@@ -351,7 +360,9 @@ SWEP.Animations = {
         MinProgress = 0.1,
         FireASAP = true,
         EventTable = {
-            {s = "KF2.", t = 12 / 30},
+            { s = "KF2.HZ12.MagOut", t = 19 / 30.33 },
+            { s = "KF2.HZ12.MagPre", t = 35 / 30.33 },
+            { s = "KF2.HZ12.MagIn", t = 48 / 30.33 },
         },
     },
     ["1_inspect"] = {
@@ -359,7 +370,8 @@ SWEP.Animations = {
         MinProgress = 0.1,
         FireASAP = true,
         EventTable = {
-            { s = "KF2.", t = 1 / 60 },
+            { s = "KF2.HZ12.Rustle", t = 3 / 20.42 },
+            { s = "KF2.HZ12.Rustle", t = 15 / 20.42 },
         },
     },
     ["2_inspect"] = {
@@ -367,14 +379,14 @@ SWEP.Animations = {
         MinProgress = 0.1,
         FireASAP = true,
         EventTable = {
-            { s = "KF2.", t = 5 / 30 },
+            { s = "KF2.MB500.HandlePumpBack", t = 21 / 30.42 },
+            { s = "KF2.MB500.HandlePumpForward", t = 48 / 30.42 },
         },
     },
     ["bash"] = {
         Source = "Bash",
         EventTable = {
-            { s = "KF2", t = 2 / 30 },
-            { s = "KF2.", t = 9 / 30 },
+            { s = "KF2.Weapon.Bash.Cloth", t = 8 / 30.43 },
         },
     },
 }

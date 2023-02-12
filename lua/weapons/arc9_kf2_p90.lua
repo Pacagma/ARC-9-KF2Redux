@@ -241,7 +241,7 @@ SWEP.CustomizePos = Vector(11, 25, 4)
 
 -------------------------- SOUNDS
 
-local path = "sound/kf2/p90/"
+local path = "sound/kf2/"
 
 --SWEP.ShootSound = "KF2.P90.SmallShoot"
 --SWEP.ShootSoundIndoor = "KF2.P90.SmallShoot"

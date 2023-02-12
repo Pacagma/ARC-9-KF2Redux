@@ -221,7 +221,7 @@ SWEP.BashWhileSprint = true
 
 -------------------------- SOUNDS
 
-local path = "sound/kf2/rpg-7/"
+local path = "sound/kf2/"
 
 SWEP.ShootSound = "KF2.RPG7.ShootOutDoor"
 SWEP.ShootSoundIndoor = "KF2.RPG7.ShootInDoor"

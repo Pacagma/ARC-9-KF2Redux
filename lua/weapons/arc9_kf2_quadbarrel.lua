@@ -253,7 +253,7 @@ SWEP.DropMagazineAng = Angle(0, -70, 0)
 
 -------------------------- SOUNDS
 
-local path = "sound/kf2/"
+local path = "sound/kf2/quadbarrel/"
 
 --SWEP.ShootSound = "KF2.Barrel.ShootOutDoor"
 --SWEP.ShootSoundIndoor = "KF2.Barrel.ShootInDoor"

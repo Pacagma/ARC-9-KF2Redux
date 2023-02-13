@@ -233,7 +233,7 @@ SWEP.CustomizePos = Vector(17, 35, 2) --WEAPON POSITION WHEN PRESSING C
 
 -------------------------- SOUNDS
 
-local path = "sound/kf2/"
+local path = "sound/kf2/hz12/"
 
 SWEP.ShootSound = "KF2.HZ12.ShootOutDoor"
 SWEP.ShootSoundIndoor = "KF2.HZ12.ShootInDoor"
@@ -264,6 +264,7 @@ SWEP.Animations = {
         EventTable = {
             {s = "KF2.HZ12.PumpBack", t = 40 / 120.52},
             {s = "KF2.HZ12.PumpForward", t = 66 / 120.52},
+            {s = "KF2.Shotgun.Shell", t = 55 / 120.52},
             {shelleject = true, att = 3, t = 50 / 120.52},
             {shelleject = true, att = 4, t = 50 / 120.52},
         },
@@ -281,10 +282,7 @@ SWEP.Animations = {
         },
     },
     ["fire_right_iron"] = {
-        Source = {"ShootIron", "ShootIron2", "ShootIron3",},
-        EventTable = {
-            { s = "KF2.", t = 18 / 60 },
-        },
+        Source = {"ShootIron", "ShootIron2", "ShootIron3",}
     },
     ["reload"] = {
         Source = "reload_half",

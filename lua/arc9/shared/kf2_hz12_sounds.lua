@@ -6,14 +6,14 @@ sound.Add( {
     --pitch = {90,110},
 	soundlevel = SNDLVL_GUNFIRE,
     sound = {
-        "kf2/HZ12/ShootOutDoor/OutDoor1.ogg",
-        "kf2/HZ12/ShootOutDoor/OutDoor2.ogg",
-        "kf2/HZ12/ShootOutDoor/OutDoor3.ogg",
-        "kf2/HZ12/ShootOutDoor/OutDoor4.ogg",
-        "kf2/HZ12/ShootOutDoor/OutDoor5.ogg",
-        "kf2/HZ12/ShootOutDoor/OutDoor6.ogg",
-        "kf2/HZ12/ShootOutDoor/OutDoor7.ogg",
-        "kf2/HZ12/ShootOutDoor/OutDoor8.ogg",
+        "kf2/HZ12/ShootOutDoor/shootOutDoor1.ogg",
+        "kf2/HZ12/ShootOutDoor/shootOutDoor2.ogg",
+        "kf2/HZ12/ShootOutDoor/shootOutDoor3.ogg",
+        "kf2/HZ12/ShootOutDoor/shootOutDoor4.ogg",
+        "kf2/HZ12/ShootOutDoor/shootOutDoor5.ogg",
+        "kf2/HZ12/ShootOutDoor/shootOutDoor6.ogg",
+        "kf2/HZ12/ShootOutDoor/shootOutDoor7.ogg",
+        "kf2/HZ12/ShootOutDoor/shootOutDoor8.ogg",
     }
 } )
 sound.Add( {

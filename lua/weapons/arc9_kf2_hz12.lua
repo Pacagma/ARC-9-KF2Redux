@@ -226,6 +226,7 @@ SWEP.ShellCorrectAng = Angle(0, 0, 0)
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 SWEP.ShellTime = 1
 SWEP.NoShellEject = true -- Don't eject shell on fire
+SWEP.NoShellEjectManualAction = true
 SWEP.ShellSounds = "KF2.Shotgun.Shell"
 --SWEP.EjectDelay = 0.25
 
@@ -277,6 +278,7 @@ SWEP.Animations = {
         EventTable = {
             {s = "KF2.HZ12.PumpBack", t = 40 / 120.52},
             {s = "KF2.HZ12.PumpForward", t = 66 / 120.52},
+            {s = "KF2.Shotgun.Shell", t = 55 / 120.52},
             {shelleject = true, att = 3, t = 50 / 120.52},
             {shelleject = true, att = 4, t = 50 / 120.52},
         },

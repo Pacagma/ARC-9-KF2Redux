@@ -22,6 +22,13 @@ ATT.IronSights = {
     CrosshairInSights = true
 }
 
-ATT.HoloSight = true
+ATT.RTScope = true
+ATT.RTScopeSubmatIndex = 2
+ATT.RTScopeFOV = 4
+ATT.RTScopeReticle = Material("arc9_fas/sprites/scope_leo")
+ATT.RTScopeColorable = false
+ATT.RTScopeShadowIntensity = 2.5
+
+ATT.ScopeScreenRatio = 0.75
 
 ARC9.LoadAttachment(ATT, "kf2_m99_scope")

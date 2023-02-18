@@ -56,7 +56,7 @@ SWEP.PhysBulletDrag = 1.15
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "357" -- What ammo type this gun uses.
+SWEP.Ammo = "sniperPenetratedRound" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 1 -- Self-explanatory.
@@ -149,11 +149,11 @@ SWEP.TracerColor = Color(255, 255, 155) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.67, 0, 0),
+    Pos = Vector(-3.25, -9, 2),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     ViewModelFOV = 60,
-    CrosshairInSights = true
+    CrosshairInSights = false
 }
 
 SWEP.ViewModelFOVBase = 70
@@ -201,8 +201,8 @@ SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "muzzleflash_pistol_deagle"
-SWEP.AfterShotParticle = "barrel_smoke"
+SWEP.MuzzleParticle = "muzzleflash_m82"
+SWEP.AfterShotParticle = "barrel_smoke_plume"
 SWEP.MuzzleEffectQCA = 1
 SWEP.ProceduralViewQCA = 1
 --SWEP.CaseEffectQCA = 4 --Shell Attachment
@@ -225,11 +225,11 @@ SWEP.CustomizePos = Vector (22, 33, 1) -- WEAPON POSITION IN THE UI
 
 local path = "sound/kf2/m99/"
 
-SWEP.ShootSound = "KF2."
-SWEP.ShootSoundIndoor = "KF2."
---SWEP.DistantShootSoundIndoor = "KF2.SW500.DistantShootInDoor"
-SWEP.DistantShootSound = "KF2."
-SWEP.DryFireSound = "KF2."
+SWEP.ShootSound = "KF2.M99.ShootOutDoor"
+SWEP.ShootSoundIndoor = "KF2.M99.ShootInDoor"
+SWEP.DistantShootSoundIndoor = "KF2.M99.DistantShootInDoor"
+SWEP.DistantShootSound = "KF2.M99.ShootInDoor"
+SWEP.DryFireSound = "KF2.M99.DryShoot"
 SWEP.FiremodeSound = "KF2.FireModeSwitch"
 --SWEP.ShootSoundTail = ""
 --SWEP.FirstShootSound = ""
@@ -243,22 +243,20 @@ SWEP.ShootPitchVariation = 0
 SWEP.Animations = {
     ["fire"] = {
         Source = "Shoot",
-        EventTable = {
-            { s = "KF2.", t = 18 / 60 },
-        },
     },
     ["fire_iron"] = {
         Source = {"ShootIron", "ShootIron2", "ShootIron3",},
-        EventTable = {
-            { s = "KF2.", t = 18 / 60 },
-        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
 		MinProgress = 0.83,
 		FireASAP = true,
         EventTable = {
-            {s = "KF2.", t = 34 / 120},
+            {s = "KF2.M99.BoltUp", t = 10 / 36},
+            {s = "KF2.M99.BoltBack", t = 13 / 36},
+            {s = "KF2.M99.BulletIn", t = 42 / 36},
+            {s = "KF2.M99.BoltFWD", t = 61 / 36},
+            {s = "KF2.M99.BoltDown", t = 66 / 36},
         },
     },
 	["reload_empty_elite"] = {
@@ -266,19 +264,23 @@ SWEP.Animations = {
         --EjectAt = 15/60,
         FireASAP = true,
         EventTable = {
-            {s = "KF2.", t = 11 / 60},
+            {s = "KF2.M99.BoltUp", t = 7 / 37.875},
+            {s = "KF2.M99.BoltBack", t = 17 / 37.875},
+            {s = "KF2.M99.BulletIn", t = 41 / 37.875},
+            {s = "KF2.M99.BoltFWD", t = 51 / 37.875},
+            {s = "KF2.M99.BoltDown", t = 59 / 37.875},
         },
     },
     ["draw"] = {
         Source = "equip",
         EventTable = {
-            {s = "KF2", t = 6 / 40},
+            {s = "KF2.M99.Equip", t = 16 / 30.46},
         },
     },
     ["holster"] = {
         Source = "PutAway",
         EventTable = {
-            {s = "KF2", t = 4 / 40},
+            {s = "KF2.M99.PutAway", t = 3 / 40.642},
         },
     },
     ["idle"] = {
@@ -301,29 +303,27 @@ SWEP.Animations = {
         MinProgress = 0.1,
         FireASAP = true,
         EventTable = {
-            {s = "KF2.", t = 12 / 30},
+            {s = "KF2.M99.BoltUp", t = 11 / 30.31},
+            {s = "KF2.M99.BoltBack", t = 20 / 30.31},
+            {s = "KF2.M99.BoltFWD", t = 46 / 30.31},
+            {s = "KF2.M99.BoltDown", t = 49 / 30.31},
         },
     },
     ["1_inspect"] = {
         Source = "Guncheck_v2",
         MinProgress = 0.1,
         FireASAP = true,
-        EventTable = {
-            { s = "KF2.", t = 1 / 60 },
-        },
     },
     ["2_inspect"] = {
         Source = "Guncheck_v3",
         MinProgress = 0.1,
         FireASAP = true,
-        EventTable = {
-            { s = "KF2.", t = 5 / 30 },
-        },
     },
     ["bash"] = {
         Source = "Bash",
         EventTable = {
-            { s = "KF2", t = 2 / 30 },
+            { s = "KF2.M99.Rustle", t = 8 / 30.47 },
+            { s = "KF2.Weapon.Bash.Cloth", t = 12 / 30.47 },
         },
     },
 }
@@ -350,7 +350,7 @@ SWEP.Attachments = {
         Category = "KF2.M99.Scope",
         Bone = "RW_Scope",
         Pos = Vector (0, 0, 0),
-        Installed = "kf2_m99_scope",
+        --Installed = "kf2_m99_scope",
         --Integral = "kf2_m4shotgun_sight",
     },
 }

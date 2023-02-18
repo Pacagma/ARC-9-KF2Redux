@@ -189,15 +189,3 @@ sound.Add( {
         "kf2/quadbarrel/Rustle/Rustle3.ogg",
     }
 } )
-sound.Add( {
-    name = "KF2.M99.Rustle",
-    channel = CHAN_STATIC,
-    volume = 1,
-    --level = 100,
-    --pitch = {97,103},
-    sound = {
-        "kf2/M99/Rustle/Rustle1.ogg",
-        "kf2/M99/Rustle/Rustle2.ogg",
-        "kf2/M99/Rustle/Rustle3.ogg",
-    }
-} )

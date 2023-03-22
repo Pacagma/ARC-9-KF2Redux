@@ -228,7 +228,7 @@ local path = "sound/kf2/m99/"
 SWEP.ShootSound = "KF2.M99.ShootOutDoor"
 SWEP.ShootSoundIndoor = "KF2.M99.ShootInDoor"
 SWEP.DistantShootSoundIndoor = "KF2.M99.DistantShootInDoor"
-SWEP.DistantShootSound = "KF2.M99.ShootInDoor"
+SWEP.DistantShootSound = "KF2.M99.DistantShoot"
 SWEP.DryFireSound = "KF2.M99.DryShoot"
 SWEP.FiremodeSound = "KF2.FireModeSwitch"
 --SWEP.ShootSoundTail = ""
@@ -350,7 +350,7 @@ SWEP.Attachments = {
         Category = "KF2.M99.Scope",
         Bone = "RW_Scope",
         Pos = Vector (0, 0, 0),
-        --Installed = "kf2_m99_scope",
+        Installed = "kf2_m99_scope",
         --Integral = "kf2_m4shotgun_sight",
     },
 }

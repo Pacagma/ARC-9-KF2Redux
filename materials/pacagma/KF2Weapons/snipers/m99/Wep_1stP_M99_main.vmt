@@ -1,22 +1,19 @@
 "VertexlitGeneric"
 {
-	"$basetexture"                      "pacagma/KF2Weapons/snipers/m99/Wep_1stP_M99_main_D"
-	"$bumpmap"					"pacagma/KF2Weapons/snipers/m99/Wep_1stP_M99_main_N"
-	"$phongexponenttexture"		"pacagma/KF2Weapons/snipers/m99/Wep_1stP_M99_main_S"
-	"$color2"					"[0.8 0.8 0.8]"
-	"$blendTintByBaseAlpha"		"1"
+	"$basetexture"                      "pacagma/KF2Weapons/snipers/m99/m99_d"
+	"$bumpmap"                          "pacagma/KF2Weapons/snipers/m99/m99_n"
+    "$phongexponenttexture"		        "pacagma/KF2Weapons/snipers/m99/m99_e"
 
-	"$envmap"					"env_cubemap"
-	"$envmaptint"				"[ .13 .13 .13 ]"
+    "$color2"				"[0.3 0.3 0.3]" //use this to brighten or darken the alpha of the diffuse. the darker paired with higher envmaptint makes more metallic reflections
+    "$blendTintByBaseAlpha"		"1"
 
-	"$phong"					"1"
-	"$phongboost"				"15"
-	"$phongfresnelranges"		"[0.25 0.5 1]"
-     "$normalmapalphaenvmapmask"              "1"
+    "$envmap"			    "env_cubemap"
+    "$envmaptint"			"[ 0.01 0.01 0.01 ]" //at 0.01 so the edgewear or metallic mask doesn't look super shiny
 
-	//"$rimlight"				"1"
-	//"$rimlightexponent"			"80"	
-	//"$rimlightboost"			".2"
-	//"$rimmask"				"0"
-	"$nocull"					"1"
+    "$phong"				"1"
+    "$phongboost"			"20" //can be raised or lowered to make it look right
+    "$phongfresnelranges"		"[.78 .9 1]"
+    "$phongalbedotint" 			"1"
+	"$nocull" "1"
 }
+
